@@ -1,0 +1,29 @@
+/*Дан    бинарный    файл,    содержащий вещественные числа. Найти максимум и минимум, поменять их в файле местами. */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main(int argc, char *argv[])
+{
+	FILE *f;
+	
+	f = fopen("input.bin", "rb+");
+	if (!f) { printf("Файл не найден!\n"); return 1; }
+	double max, min, val;
+	int imax = 0, imin = 0, i = 1;
+	fread(&val, sizeof(double), 1, f);
+	max = min = val;
+	while (!feof(f)){
+		fread(&val, sizeof(double), 1, f);
+		if (val > max) { max = val; imax = i; }
+		if (val < min) { min = val; imin = i; }
+		i++;
+	}
+	fseek(f, imax*sizeof(double), 0);
+	fwrite(&min, sizeof(double), 1, f);
+	fseek(f, imin*sizeof(double), 0);
+	fwrite(&max, sizeof(double), 1, f);
+	fclose(f); return 0;
+}

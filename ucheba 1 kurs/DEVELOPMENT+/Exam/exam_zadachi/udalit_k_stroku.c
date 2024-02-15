@@ -1,0 +1,43 @@
+# include <stdio.h>
+// ”‰‡ÎËÚ¸ k-Û˛ ÒÚÓÍÛ Ï‡ÚËˆ˚ ÔÓ Û·˚‚‡ÌË˛
+// udalit k stroku matr po ubivaniu
+int main()
+{
+	int N, M, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d%d", &N, &M);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < M; j++)
+			scanf("%d", &matr[i][j]);
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < M; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+	int l;
+	printf("Input numbers of lines\n");
+	scanf("%d%d", &k, &l);
+	
+
+	for (j=0; j<N; j++)
+		for (i=k;i<M-1;i++)
+			matr[j][i]=matr[j][i+1];
+	
+	M--;
+
+
+	
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < M; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+
+
+
+	return 0;
+}

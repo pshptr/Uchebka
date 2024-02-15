@@ -1,0 +1,118 @@
+Структура «Человек»: фамилия, имя, отчество; домашний адрес; номер телефона; возраст.
+Создать массив структур. Функции ввода, вывода, поиска, редактирования.
+struct FIO
+{
+char f[30], i[30],o[30];
+};
+
+struct adress
+{
+char *country, *city, *street;
+int house, flat;
+
+
+};
+struct student
+{
+FIO fio;
+//adress adr;
+int stepuha;
+int marks[5];
+
+};
+student *input(mas, n);
+
+int main()
+{
+student *mas;
+int i,j,n=30;
+mas=(struct student *) calloc(n, sizeof (struct student));
+
+mas=input(mas, n);
+
+// output(mas,n);
+
+output (sort(mas,n),n);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+student *input(mas, n)
+{
+for (int i=0;i<n; i++)
+{
+	cout << "Input FIO\n";
+	cin >>mas[i].fio.f;
+	cin >>mas[i].fio.i;
+	cin >>mas[i].fio.o;
+	cout <<"Input 5 marks\n";
+	for (int j=0; j<5; j++)
+		cin >>mas[i].marks[j];
+
+	mas[i].stepuha=calc_step(mas[i].marks,5);
+
+}
+return mas;
+}
+
+
+int calc_step(int *a,int n)
+{
+float sr;
+int S=0;
+for (int i=0; i<n; i++)
+{
+if (a[i]<4) return 0;
+}
+for (int i=0; i< n; i++)
+{
+S+=a[i];
+
+}
+
+sr=S/5;
+
+if (sr >=8) return 100;
+if (sr >=6 && sr<8) return 80;
+else return 40;
+
+
+
+
+}
+
+student *sort(student *mas,int n)
+{
+for (int i=0; i<n; i++)
+	for (int j=0; j<n; j++)
+		if (mas[i].stepuha >mas[j].stepuha)
+			{
+student temp;
+temp=mas[i];
+mas[i]=mas[j];
+mas[j]=temp;
+
+
+}
+
+
+
+}

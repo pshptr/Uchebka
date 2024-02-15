@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": true,
+      "cwd": "/Users/petia/Downloads/УчЁбка/DEVELOPMENT+/2 Semestr/Новая папка/Laba1_21-02",
+      "environment": [],
+      "program": "/Users/petia/Downloads/УчЁбка/DEVELOPMENT+/2 Semestr/Новая папка/Laba1_21-02/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "externalConsole": true
+    }
+  ]
+}

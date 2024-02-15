@@ -1,0 +1,75 @@
+
+# include <stdio.h>
+
+//строка с макс произв неч. элем
+// stroka s max proizv nechet elementov
+int ** mem_init(int n, int m);
+int ** input ( int n, int m);
+double mult_odd (int *m, int n);
+bool odd(int a);
+
+int main()
+{
+	int **a, n, m, i, p;
+
+	scanf ("%d", &n);
+	scanf ("%d", &m);
+
+	
+	a= input(n,m);
+	
+	double max = mult_odd (a[0], m);
+	int ind=0;
+
+	for ( i=1; i<n; i++)
+	{
+		if (mult_odd (a[i], m) > max)
+		{
+			max = mult_odd (a[i], m);
+			ind=i;
+		} 
+	}
+	
+	
+
+	return 0;
+}
+int ** input ( int n, int m)
+{
+	int **a;
+	a= mem_init (n,m);
+	for (int i=0; i<n; i++)
+		for (int j=0; j<m; j++)
+			scanf("%d", (*(a+i)+j));
+	
+	return a;
+}
+
+
+
+
+int ** mem_init(int n, int m)
+{	
+	int **a;	
+	a= (int**)calloc(n,sizeof(int*));
+	for (int i=0; i<n; i++)
+		a[i]= (int*)calloc(m,sizeof(int));
+	
+}
+
+double mult_odd (int *m, int n)
+{
+	double p=1;
+	for (int i=0; i<n; i++)
+		if (odd(*(m+i)==TRUE)
+			p*=*(m+i);
+
+	return p;
+}
+
+bool odd(int a)
+{
+	if (a%2!=0)
+		return TRUE;
+	else return FALSE;
+}

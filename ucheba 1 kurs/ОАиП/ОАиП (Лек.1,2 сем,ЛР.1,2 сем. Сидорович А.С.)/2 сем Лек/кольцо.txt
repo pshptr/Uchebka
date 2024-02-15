@@ -1,0 +1,278 @@
+﻿#include <iostream>
+using namespace std;
+struct Ring {
+	int data;
+	struct Ring* next;
+};
+//struct Ring {
+//	int data;
+//	struct Ring* next;
+//	struct Ring* prev;
+//
+//};
+
+void push(struct Ring** p, int x);
+void pop(struct Ring** p);
+void print(Ring* p);
+int num(Ring* p);
+void task(Ring* p, int k);
+Ring* pop(struct Ring* p);
+Ring* push(struct Ring* p, int a);
+
+int main()
+{
+	Ring* p = NULL;
+	int a, b = 0;
+	while (cin >> a)
+		//p = push(p, a);
+		push(&p, a);
+
+	print(p);
+	cout << endl;
+	rewind(stdin);
+	int n = 3;
+	//while (b != 6) {
+	//	//p = pop(p);
+	//	pop(&p);
+	//	print1(p);
+	//	b++;
+	//}
+	task(p, n);
+
+}
+int num(Ring* p)
+{
+	int cnt = 0;
+	struct Ring* temp = p;
+	if (p == NULL) cnt = 0;
+	else
+		do
+		{
+
+			temp = temp->next;
+			cnt++;
+		} while (temp != p);
+		return cnt;
+
+}
+void task(Ring* p, int k)
+{
+	int n = num(p);
+	while (n != 1)
+	{
+		int a = k;
+		while (a != 1)
+		{
+			p = p->next;
+			a--;
+		}
+		p = pop(p);
+		n--;
+	}
+	cout << p->data;
+}
+
+//Ring* push(struct Ring* p, int x) {
+//	struct Ring* temp;
+//	temp = new Ring;
+//	temp->next = NULL;
+//	temp->prev = NULL;
+//	temp->data = x;
+//	if (p == NULL)
+//	{
+//		temp->next = temp;
+//		temp->prev = temp;
+//		p = temp;
+//	}
+//	else
+//	{
+//		temp->next = p->next;
+//		p->next->prev = temp;
+//		p->next = temp;
+//		temp->prev = p;
+//		p = temp;
+//	}
+//	return p;
+//}
+//Ring* pop(struct Ring* p)
+//{
+//	if (p == NULL) {
+//		cout << "Empty"; return NULL;
+//	}
+//	if (p == p->next)
+//	{
+//		delete p;
+//		return NULL;
+//	}
+//	else
+//	{
+//		Ring* temp;
+//		temp = p->next;
+//		p->next = temp->next;
+//		temp->next->prev = p;
+//		delete temp;
+//		return p;
+//	}
+//}
+//void print1(Ring* p)
+//{
+//	struct Ring* temp = p;
+//	if (p == NULL) cout << "EMPTY";
+//	else
+//		do
+//		{
+//			cout << temp->data << "   ";
+//			temp = temp->next;
+//		} while (temp != p);
+//		cout << endl;
+//
+//}
+//void print2(Ring* p)
+//{
+//	struct Ring* temp = p;
+//	if (p == NULL) cout << "EMPTY";
+//	else
+//		do
+//		{
+//			cout << temp->data << "   ";
+//			temp = temp->prev;
+//		} while (temp != p);
+//		cout << endl;
+//
+//}
+//
+//
+//
+//void push(struct Ring** p, int x) {
+//	struct Ring* temp;
+//	temp = new Ring;
+//	temp->next = NULL;
+//	temp->prev = NULL;
+//	temp->data = x;
+//	if (*p == NULL)
+//	{
+//		temp->next = temp;
+//		temp->prev = temp;
+//		*p = temp;
+//	}
+//	else
+//	{
+//		temp->next = (*p)->next;
+//		(*p)->next->prev = temp;
+//		(*p)->next = temp;
+//		temp->prev = *p;
+//		*p = temp;
+//	}
+//}
+//void pop(struct Ring** p)
+//{
+//	if (*p == NULL) {
+//			cout << "Empty"; return ;
+//		}
+//	if (*p == (*p)->next)
+//	{
+//		delete* p;
+//		*p = NULL;
+//	}
+//	else
+//	{
+//		Ring* temp;
+//		temp = (*p)->next;
+//		(*p)->next = temp->next;
+//		temp->next->prev = *p;
+//		delete temp;
+//	}
+//}
+
+void push(struct Ring** p, int x) {
+	struct Ring* temp;
+	temp = new Ring;
+	temp->next = NULL;
+	temp->data = x;
+	if (*p == NULL)
+	{
+		temp->next = temp;
+		*p = temp;
+
+	}
+	else
+	{
+		temp->next = (*p)->next;
+		(*p)->next = temp;
+	}
+}
+
+Ring* push(struct Ring* p, int x) {
+	struct Ring* temp;
+	temp = new Ring;
+	temp->next = NULL;
+	temp->data = x;
+	if (p == NULL)
+	{
+		temp->next = temp;
+		p = temp;
+
+	}
+	else
+	{
+		temp->next = p->next;
+		p->next = temp;
+	}
+	return p;
+}
+
+void pop(struct Ring** p)
+{
+	if (*p == NULL) {
+		cout << "Empty"; return;
+	}
+	if (*p == (*p)->next)
+	{
+		delete* p;
+		*p = NULL;
+	}
+	else
+	{
+		Ring* temp;
+		temp = (*p)->next;
+		(*p)->next = (*p)->next->next;
+		delete temp;
+	}
+}
+
+Ring* pop(struct Ring* p)
+{
+	if (p == NULL) {
+		cout << "EMPTY"; return NULL;
+	}
+	if (p == p->next)
+	{
+		delete p;
+		return NULL;
+	}
+	else
+	{
+		Ring* temp;
+		temp = p->next;
+		p->next = p->next->next;
+		delete temp;
+		return p;
+	}
+}
+
+void print(Ring* p)
+{
+	struct Ring* temp = p;
+	if (p == NULL) cout << "EMPTY";
+	else
+		do
+		{
+			cout << temp->data << "   ";
+			temp = temp->next;
+		} while (temp != p);
+		cout << endl;
+
+}
+
+
+

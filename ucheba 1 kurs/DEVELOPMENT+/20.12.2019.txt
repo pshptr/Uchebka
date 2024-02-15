@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cmath>
+
+
+using namespace std;
+namespace part_1 {
+    void begin1 ()  //числа Фибоначчи
+{
+     double c,b,n;
+     cout<<"Введите значение n ";
+     cin >> n;
+     double a = b = 1;
+     for(double i = 3; i <= n; i ++) {
+       double c = a + b;
+       a = b;
+       b = c;
+   }
+    cout<<" Число Фибоначчи  ";
+    cout << b << endl;
+    
+ } 
+   void begin2 ()  //факториал числа
+   {
+      int fuct=1.0;
+      int b;
+      int a=1;
+      cout<<"Введите значение числа фактриал которого нужно узнать ";
+      cin >> b;
+      while(a<=b) {
+          fuct*=a;
+          a++;
+      }
+      cout<< " Факториал " << b << " " << "равен" <<" ";
+      cout << fuct << endl;
+      
+       
+   }
+
+}
+    int main ()
+    {
+        part_1::begin2 ();
+        return 0;
+    }

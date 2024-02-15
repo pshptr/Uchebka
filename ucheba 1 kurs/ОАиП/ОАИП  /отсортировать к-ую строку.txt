@@ -1,0 +1,49 @@
+
+# include <stdio.h>
+# include <stdlib.h>
+# include <alloc.h>
+
+int main()
+{
+	int **A, n,m,k,i,j;
+	printf ("input array size\n");
+	scanf ("%d%d", &n,&m);
+
+	A= (int**)calloc (n,sizeof (int*));
+	for (i=0; i<n; i++)
+		*(A+i)= (int*)calloc (m,sizeof (int));
+
+	for (i=0; i<n; i++)
+		for (j=0; j<m; j++)
+		scanf ("%d", &(*(*(A+i)+j)));
+	
+	scanf ("%d", &k);
+
+	for (i=0; i<m; i++)
+	{
+		for (j=0; j<m-1; j++)
+		{
+			if ( *(*(A+k)+j)>*(*(A+k)+j+1)) //A[k][j]>A[k][j+1]
+				{
+					int temp= *(*(A+k)+j); //A[k][j]
+					*(*(A+k)+j)=*(*(A+k)+j+1); 
+					*(*(A+k)+j+1)=temp;
+				}
+		}
+	}
+	
+	for (i=0; i<n; i++)
+	{
+		for (j=0; j<m; j++)
+			printf ("%3d", *(*(A+i)+j));
+		printf("\n");
+	}
+
+	for (i=0; i<n; i++)
+	{
+		free (*(A+i));
+	}
+	free (A);
+
+	return 0;
+}

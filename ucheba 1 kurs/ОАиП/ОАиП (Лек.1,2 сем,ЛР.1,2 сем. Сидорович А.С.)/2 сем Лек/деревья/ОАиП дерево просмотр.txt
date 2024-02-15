@@ -1,0 +1,12 @@
+void print(tree *node) //Функция обхода
+{
+	if (node != NULL) //Пока не встретится пустое звено
+	{
+		
+		printf("%4d ", node->data); 
+		print(node->left);
+		printf("\n");
+		print(node->right); 
+		
+	}
+}

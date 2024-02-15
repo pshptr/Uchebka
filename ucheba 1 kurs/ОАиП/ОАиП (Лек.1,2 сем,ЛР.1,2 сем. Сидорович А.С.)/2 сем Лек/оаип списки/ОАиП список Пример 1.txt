@@ -1,0 +1,161 @@
+struct LIST 
+{
+ 	int data;
+	LIST *next;
+};
+
+
+void push1( LIST **head, LIST **tail, int x)
+{
+struct LIST *temp;    
+temp = (LIST*)calloc(1,sizeof(LIST));
+temp ->next = NULL;
+temp ->data = x;
+if (*head == NULL)
+{
+    	*head = temp;
+	*tail = temp;
+}
+else 
+{
+	temp ->next = *head;
+	*head = temp;
+}
+
+}
+
+
+LIST *push2( LIST *head, int x)
+{
+struct LIST *temp;    
+temp = (LIST*)calloc(1,sizeof(LIST));
+//temp ->data = x;
+temp ->next = head;
+temp ->data = x;
+return temp;
+
+}
+
+
+void pop1(LIST **head, LIST **tail)
+{
+
+	if (*head != NULL)
+	{
+		LIST *temp=*head;
+		*head = *head->next;
+		free( temp);
+	}
+	if (*head==NULL)
+		*tail=NULL;
+}
+
+LIST* pop2(LIST *head)
+{
+
+	if (head != NULL)
+	{
+		LIST temp;
+		temp=head;
+		head = head->next;
+		free( temp);
+	}
+	return head;
+}
+
+void print(LIST *head)
+{
+	LIST *temp=head;
+	while(temp!=NULL)
+	{
+		printf("%4d", temp->data);
+		temp=temp->next;
+	}
+	printf("\n");
+}
+
+//все четные элементы списка занести в другой список. 
+//Из первого списка не удалять.
+void task1(LIST *head1, LIST **head2, LIST ** tail2)
+{
+	LIST *temp=head1;
+	while ( temp ) // while (temp!=NULL)
+	{
+		if (temp->data %2 == 0)
+			push1(head2, tail2, temp->data);
+		
+		temp=temp->next;
+	}
+
+}
+
+//все  элементы списка "стоящие на четных местах" занести в другой список. 
+//Из первого списка не удалять.
+
+void task2(LIST *head1, LIST **head2, LIST ** tail2)
+{
+	LIST *temp=head1;
+	int a=1;
+	while ( temp ) // while (temp!=NULL)
+	{
+		if (a%2==0)
+			push1(head2, tail2, temp->data);
+		
+		temp=temp->next;
+		a++;
+	}
+
+}
+
+int main()
+{
+	LIST *h=NULL, *t=NULL;
+	int x;
+	for (int i=0; i<5; i++)
+	{
+		x=rand()%10;
+	//	push1(h,t,x);
+		
+		h=push2(h,x)
+		if (t==NULL)
+		{
+			
+			t=h;
+		}
+	}
+	
+
+	print(h);
+	
+	
+	LIST *h2=NULL, *t2=NULL;
+	task1(h, h2,t2);
+	
+
+/*	for ( int i=0; i<3; i++)
+	{
+
+		//pop1(h,t);
+		h=pop2(h);
+		if (h==NULL)
+			t=NULL;
+	}
+*/
+
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

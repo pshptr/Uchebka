@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    double x1=3,a ;
+     double y1=2,b ;
+      double x2=3,c ;
+       double y2=6,S ;
+        double x3=5,p ;
+         double y3=1 ;
+   
+   a=sqrt(pow(x2-x1,2.0)+pow(y2-y1,2.0));
+   b=sqrt(pow(x3-x2,2.0)+pow(y3-y2,2.0));
+   c=sqrt(pow(x3-x1,2.0)+pow(y3-y1,2.0));
+ 
+  // S=sqrt(pow(x2-x1,2.0)+pow(y2-y1,2.0));
+   
+    p=(a+b+c) / 2;
+    S=sqrt(p*(p-a)*(p-b)*(p-c));
+    
+    std::cout<<S<<std::endl;
+    std::cout<<p<<std::endl;
+  
+    return 0;
+}

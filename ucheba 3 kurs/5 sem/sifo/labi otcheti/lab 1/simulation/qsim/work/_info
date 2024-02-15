@@ -1,0 +1,161 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\user\Desktop\projects\3course\SIFO\lab1\simulation\qsim
+vBlock2
+Z1 !s100 E=Qzd_OE@bgAe[_M7@oQl0
+Z2 I?lJYcRfjSlUGkThH;c8Bf0
+Z3 V8C9Gz8C749TC6Znkcn:>A0
+Z4 dC:\Users\user\Desktop\projects\3course\SIFO\lab1\simulation\qsim
+Z5 w1695228417
+Z6 8lab1.vo
+Z7 Flab1.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|lab1.vo|
+Z10 o-work work -O0
+Z11 n@block2
+Z12 !s108 1695228417.836000
+Z13 !s107 lab1.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vBlock2_vlg_check_tst
+Z14 !s100 Q6AHfSf96SbAB=LbVL;^e1
+Z15 IFzO^PGTY4egdJ7A_AhGHQ2
+Z16 VdzeDnb<W=jj=ag;moCP;f2
+R4
+Z17 w1695223991
+Z18 8test_example.vwf.vt
+Z19 Ftest_example.vwf.vt
+L0 59
+R8
+r1
+31
+Z20 !s108 1695223993.247000
+Z21 !s107 test_example.vwf.vt|
+Z22 !s90 -work|work|test_example.vwf.vt|
+R10
+Z23 n@block2_vlg_check_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vBlock2_vlg_sample_tst
+Z24 !s100 9MVA6Ac:i_kAiHAMofGMV3
+Z25 IU5^3dYdo`nka[9VIndck51
+Z26 VldEL^g8kQAU^j3@5WXM>I1
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+31
+R20
+R21
+R22
+R10
+Z27 n@block2_vlg_sample_tst
+!i10b 1
+!s85 0
+!s101 -O0
+vBlock2_vlg_vec_tst
+Z28 !s100 H1HlGA`P0XG4:Y:e4]_LX0
+Z29 IJfhPL?azSJJQHGd`9Y;0I3
+Z30 VniRYiKO^Dm>FO`M@4a0Mg1
+R4
+Z31 w1695228416
+Z32 8test_lab1.vwf.vt
+Z33 Ftest_lab1.vwf.vt
+L0 29
+R8
+r1
+31
+Z34 !s90 -work|work|test_lab1.vwf.vt|
+R10
+Z35 n@block2_vlg_vec_tst
+Z36 !s108 1695228417.878000
+Z37 !s107 test_lab1.vwf.vt|
+!i10b 1
+!s85 0
+!s101 -O0
+vlab1
+Z38 !s100 kg9CJBDXZ?j0WA<Z:=3hA2
+Z39 Ikh2z?7;BXYT:>[JUb]c:L0
+Z40 VNiiSkG2FiT?JefD^[boAo1
+R4
+Z41 w1695304990
+R6
+R7
+L0 31
+R8
+r1
+31
+R9
+R10
+!i10b 1
+!s85 0
+Z42 !s108 1695304991.867000
+R13
+!s101 -O0
+vlab1_vlg_check_tst
+!i10b 1
+Z43 !s100 b^78Tm168WOCC_=@ThULS1
+Z44 I:>hU5:@BKoPSFn3KY2OZ=2
+Z45 VN7?Hi:iUi0Kj6V[VGIHTl1
+R4
+Z46 w1695304989
+R32
+R33
+L0 61
+R8
+r1
+!s85 0
+31
+Z47 !s108 1695304991.933000
+Z48 !s107 test_lab1.vwf.vt|
+R34
+!s101 -O0
+R10
+vlab1_vlg_sample_tst
+!i10b 1
+Z49 !s100 k76^;NB9^Q;]9SdPR9SW_1
+Z50 IlF11OS?L?`WjjDXDB8@]Y2
+Z51 VPE;f3dCiXRA[@n[CY6n5G1
+R4
+R46
+R32
+R33
+L0 29
+R8
+r1
+!s85 0
+31
+R47
+R48
+R34
+!s101 -O0
+R10
+vlab1_vlg_vec_tst
+!i10b 1
+!s100 jVMb4oJgMPQ@NDjlKlR?O3
+IT[85gW7Ozke]JZzToSgg@2
+Z52 VPbAMk81@?Q^0S[F;U`DUN3
+R4
+R46
+R32
+R33
+Z53 L0 237
+R8
+r1
+!s85 0
+31
+R47
+R48
+R34
+!s101 -O0
+R10

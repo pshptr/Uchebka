@@ -1,0 +1,42 @@
+# include <stdio.h>
+// Найти строку с максимальной суммой элементов в квадратной матрице
+// naiti stroku s max summoi elementov
+int main()
+{
+	int N, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d", &N);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < N; j++)
+			scanf("%d", &matr[i][j]);
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+
+	int max_S = 0, ind_max_line=0;
+	for (j = 0; j < N; j++)
+		max_S += matr[0][j];
+	
+	for (i = 1; i < N; i++)
+	{
+		S=0;
+		for (j = 0; j < N; j++)
+			S += matr[i][j];
+
+		if (max_S < S)
+		{
+			max_S = S;
+			ind_max_line = i;
+		}
+	}
+
+
+	printf("max summa in %d line = %d", ind_max_line+1, max_S);
+
+		return 0;
+}

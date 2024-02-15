@@ -1,0 +1,27 @@
+# include <stdio.h>
+// сумма элементов k -ой строки матрицы
+// summa elementov k stroki
+
+int main()
+{
+	int N, M, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d%d", &N, &M);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < M; j++)
+			scanf("%d", &matr[i][j]);
+
+
+	printf("Input number of line\n");
+	scanf("%d", &k);
+
+	
+		for (j = 0; j < M; j++)
+			S += matr[k-1][j];
+	
+
+	printf("S= %d", S);
+
+		return 0;
+}

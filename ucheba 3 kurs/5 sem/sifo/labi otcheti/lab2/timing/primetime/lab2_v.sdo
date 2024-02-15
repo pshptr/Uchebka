@@ -1,0 +1,1299 @@
+// Copyright (C) 1991-2010 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+
+// 
+// Device: Altera EP2S15F484C3 Package FBGA484
+// 
+
+// 
+// This SDF file should be used for PrimeTime (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "task2")
+  (DATE "10/20/2023 14:03:52")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus II")
+  (VERSION "Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE CLK\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (864:864:864) (864:864:864))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "mux21")
+    (INSTANCE inst5\~clkctrl.mux_inst.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT A (1270:1270:1270) (1270:1270:1270))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffe")
+    (INSTANCE inst5\~clkctrl.extena0_reg)
+    (DELAY
+      (ABSOLUTE
+        (PORT CLK (0:0:0) (0:0:0))
+        (IOPATH (posedge CLK) Q (85:85:85) (85:85:85))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD D (posedge CLK) (49:49:49) (49:49:49))
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst3\|sub\|68.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (291:291:291) (291:291:291))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst3\|sub\|68.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (241:241:241) (241:241:241))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst3\|sub\|34)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1192:1192:1192))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst3\|sub\|115.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (293:293:293) (293:293:293))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|115.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (241:241:241) (241:241:241))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|115.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (323:323:323) (323:323:323))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst3\|sub\|111)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1192:1192:1192))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|126.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (345:345:345) (345:345:345))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst3\|sub\|126.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (292:292:292) (292:292:292))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|126.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (241:241:241) (241:241:241))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|126.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (321:321:321) (321:321:321))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst3\|sub\|122)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1192:1192:1192))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|137.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (389:389:389) (389:389:389))
+        (IOPATH IN1 Y (378:378:378) (378:378:378))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst3\|sub\|137.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (284:284:284) (284:284:284))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|137.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (349:349:349) (349:349:349))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|137.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (241:241:241) (241:241:241))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst3\|sub\|137.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (310:310:310) (310:310:310))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst3\|sub\|134)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1192:1192:1192) (1192:1192:1192))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst5.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (263:263:263) (263:263:263))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (250:250:250) (250:250:250))
+        (IOPATH IN1 Y (272:272:272) (272:272:272))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst5.datae_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (224:224:224) (224:224:224))
+        (IOPATH IN1 Y (154:154:154) (154:154:154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (219:219:219) (219:219:219))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst4\|sub\|34\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (333:333:333) (333:333:333))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst4\|sub\|34)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1291:1291:1291) (1291:1291:1291))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|111\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (320:320:320) (320:320:320))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|111\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (333:333:333) (333:333:333))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst4\|sub\|111)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1291:1291:1291) (1291:1291:1291))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|122\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (320:320:320) (320:320:320))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|122\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (308:308:308) (308:308:308))
+        (IOPATH IN1 Y (228:228:228) (228:228:228))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|122\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (333:333:333) (333:333:333))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst4\|sub\|122)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1291:1291:1291) (1291:1291:1291))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|134\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (329:329:329) (329:329:329))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|134\~0.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (299:299:299) (299:299:299))
+        (IOPATH IN1 Y (228:228:228) (228:228:228))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|134\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH IN1 Y (333:333:333) (333:333:333))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst4\|sub\|134\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (295:295:295) (295:295:295))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_lcell_ff")
+    (INSTANCE inst4\|sub\|134)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (1291:1291:1291) (1291:1291:1291))
+        (PORT datain (155:155:155) (155:155:155))
+        (IOPATH (posedge clk) regout (94:94:94) (94:94:94))
+      )
+    )
+    (TIMINGCHECK
+      (SETUPHOLD datain (posedge clk) (90:90:90) (149:149:149))
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~0.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (332:332:332) (332:332:332))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~0.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (324:324:324) (324:324:324))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~0.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (305:305:305) (305:305:305))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~0.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (303:303:303) (303:303:303))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~1.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (332:332:332) (332:332:332))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~1.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (324:324:324) (324:324:324))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~1.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (307:307:307) (307:307:307))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~1.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (301:301:301) (301:301:301))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~2.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (334:334:334) (334:334:334))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~2.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (326:326:326) (326:326:326))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~2.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (310:310:310) (310:310:310))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~2.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (307:307:307) (307:307:307))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~3.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (334:334:334) (334:334:334))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~3.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (326:326:326) (326:326:326))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~3.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (311:311:311) (311:311:311))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~3.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (306:306:306) (306:306:306))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~4.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (342:342:342) (342:342:342))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~4.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (333:333:333) (333:333:333))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~4.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (359:359:359) (359:359:359))
+        (IOPATH IN1 Y (228:228:228) (228:228:228))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~4.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (319:319:319) (319:319:319))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~5.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (342:342:342) (342:342:342))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~5.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (333:333:333) (333:333:333))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~5.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (324:324:324) (324:324:324))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~5.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (318:318:318) (318:318:318))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~6.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (342:342:342) (342:342:342))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~6.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (333:333:333) (333:333:333))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~6.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (321:321:321) (321:321:321))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~6.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (318:318:318) (318:318:318))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~7.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (342:342:342) (342:342:342))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~7.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (333:333:333) (333:333:333))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~7.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (323:323:323) (323:323:323))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~7.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (317:317:317) (317:317:317))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~8.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (340:340:340) (340:340:340))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~8.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (332:332:332) (332:332:332))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~8.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (321:321:321) (321:321:321))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~8.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (315:315:315) (315:315:315))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~9.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (340:340:340) (340:340:340))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~9.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (332:332:332) (332:332:332))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~9.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (319:319:319) (319:319:319))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~9.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (316:316:316) (316:316:316))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~10.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (339:339:339) (339:339:339))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~10.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (331:331:331) (331:331:331))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~10.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (318:318:318) (318:318:318))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~10.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (312:312:312) (312:312:312))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~11.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (339:339:339) (339:339:339))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~11.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (331:331:331) (331:331:331))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~11.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (316:316:316) (316:316:316))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~11.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (313:313:313) (313:313:313))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~12.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1089:1089:1089) (1089:1089:1089))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~12.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1060:1060:1060) (1060:1060:1060))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~12.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (855:855:855) (855:855:855))
+        (IOPATH IN1 Y (228:228:228) (228:228:228))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~12.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (872:872:872) (872:872:872))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~13.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1082:1082:1082) (1082:1082:1082))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~13.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1053:1053:1053) (1053:1053:1053))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~13.datac_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (850:850:850) (850:850:850))
+        (IOPATH IN1 Y (228:228:228) (228:228:228))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~13.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (862:862:862) (862:862:862))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~14.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1089:1089:1089) (1089:1089:1089))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "AND1")
+    (INSTANCE inst\|32\~14.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1060:1060:1060) (1060:1060:1060))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~14.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (824:824:824) (824:824:824))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~14.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (871:871:871) (871:871:871))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~15.dataa_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1082:1082:1082) (1082:1082:1082))
+        (IOPATH IN1 Y (366:366:366) (366:366:366))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~15.datab_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (1053:1053:1053) (1053:1053:1053))
+        (IOPATH IN1 Y (346:346:346) (346:346:346))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~15.datad_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (819:819:819) (819:819:819))
+        (IOPATH IN1 Y (225:225:225) (225:225:225))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "INV")
+    (INSTANCE inst\|32\~15.dataf_combout_inst)
+    (DELAY
+      (ABSOLUTE
+        (PORT IN1 (861:861:861) (861:861:861))
+        (IOPATH IN1 Y (53:53:53) (53:53:53))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE CLK2\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1420:1420:1420) (1420:1420:1420))
+        (IOPATH datain padio (2154:2154:2154) (2154:2154:2154))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE Q0\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2318:2318:2318) (2318:2318:2318))
+        (IOPATH datain padio (1998:1998:1998) (1998:1998:1998))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE Q1\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (337:337:337) (337:337:337))
+        (IOPATH datain padio (2144:2144:2144) (2144:2144:2144))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE Q2\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1531:1531:1531) (1531:1531:1531))
+        (IOPATH datain padio (1972:1972:1972) (1972:1972:1972))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE Q3\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1931:1931:1931) (1931:1931:1931))
+        (IOPATH datain padio (1992:1992:1992) (1992:1992:1992))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[15\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1255:1255:1255) (1255:1255:1255))
+        (IOPATH datain padio (1982:1982:1982) (1982:1982:1982))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[14\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2014:2014:2014) (2014:2014:2014))
+        (IOPATH datain padio (1982:1982:1982) (1982:1982:1982))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[13\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1135:1135:1135) (1135:1135:1135))
+        (IOPATH datain padio (2134:2134:2134) (2134:2134:2134))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[12\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (804:804:804) (804:804:804))
+        (IOPATH datain padio (1972:1972:1972) (1972:1972:1972))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[11\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (758:758:758) (758:758:758))
+        (IOPATH datain padio (1982:1982:1982) (1982:1982:1982))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[10\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (816:816:816) (816:816:816))
+        (IOPATH datain padio (1972:1972:1972) (1972:1972:1972))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[9\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1069:1069:1069) (1069:1069:1069))
+        (IOPATH datain padio (1952:1952:1952) (1952:1952:1952))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[8\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2279:2279:2279) (2279:2279:2279))
+        (IOPATH datain padio (1932:1932:1932) (1932:1932:1932))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[7\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (765:765:765) (765:765:765))
+        (IOPATH datain padio (1942:1942:1942) (1942:1942:1942))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[6\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1057:1057:1057) (1057:1057:1057))
+        (IOPATH datain padio (1942:1942:1942) (1942:1942:1942))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[5\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1068:1068:1068) (1068:1068:1068))
+        (IOPATH datain padio (2046:2046:2046) (2046:2046:2046))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[4\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (767:767:767) (767:767:767))
+        (IOPATH datain padio (1982:1982:1982) (1982:1982:1982))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[3\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (472:472:472) (472:472:472))
+        (IOPATH datain padio (1932:1932:1932) (1932:1932:1932))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[2\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (487:487:487) (487:487:487))
+        (IOPATH datain padio (1932:1932:1932) (1932:1932:1932))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[1\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1718:1718:1718) (1718:1718:1718))
+        (IOPATH datain padio (2104:2104:2104) (2104:2104:2104))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "stratixii_asynch_io")
+    (INSTANCE res\[0\]\~I.inst1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (796:796:796) (796:796:796))
+        (IOPATH datain padio (2134:2134:2134) (2134:2134:2134))
+      )
+    )
+  )
+)

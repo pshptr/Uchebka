@@ -1,0 +1,1000 @@
+#include <iostream>
+#include "fstream"
+#include "cmath"
+
+using namespace std;
+
+namespace part_3 {
+
+   const double pi = 3.14;
+
+   void begin1(){
+      double a;
+      cout << "Введите сторону квадрата: ";
+      cin >> a;
+      double p = 4 * a;
+      cout << "Периметр квадрата = " << p << endl;
+   }
+
+   void begin2(){
+      double a;
+      cout << "Введите сторону квадрата: ";
+      cin >> a;
+      double s = pow(a, 2.0);
+      cout << "Площадь квадрата = " << s << endl;
+   }
+
+   void begin3(){
+      double a, b;
+      cout << "Введите стороны прямоугольника a и b (через пробел): ";
+      cin >> a >> b;
+      double s = a * b;
+      double p = (a + b) * 2;
+      cout << "Площадь прямоугольника = " << s << endl;
+      cout << "Периметр прямоугольника = " << p << endl;
+   }
+
+   void begin4(){
+      double d;
+      cout << "Введите диаметр окружности: ";
+      cin >> d;
+      double L = pi * d;
+      cout << L << endl;
+   }
+   
+   void begin5() {
+      double a;
+      cout << "Введите длину ребра куба: ";
+      cin >> a;
+      double V = pow(a, 3.0);
+      double S = 6 * pow(a, 2);
+      cout << "Объем куба = " << V << endl;
+      cout << "Площадь поверхности куба = " << S << endl;
+   }
+   
+   void begin6() {
+      double a, b, c;
+      cout << "Введите длины ребер a, b, c прямоугольного параллелепипеда: ";
+      cin >> a >> b >> c;
+      double V = a * b * c;
+      double S = 2 * (a * b + b * c + a * c);
+      cout << "Объем прямоугольного параллелепипеда = " << V << endl;
+      cout << "Площадь прямоугольного параллелепипеда = " << S << endl;
+   }
+   
+   void begin7() {
+      double R;
+      cout << "Введите радиус окружности: ";
+      cin >> R;
+      double L = 2 * pi * R;
+      double S = pi * pow(R, 2.0);
+      cout << "Длина окружности = " << L << endl;
+      cout << "Площадь окружности = " << S << endl;
+   }
+   
+   void begin8() {
+      double a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      double average = (a + b) / 2;
+      cout << "Среднее арифметическое двух чисел = " << average << endl;
+   }
+   
+   void begin9() {
+      double a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      double geometricMean = sqrt(a * b);
+      cout << "Среднее геометрчиеское двух чисел = " << geometricMean << endl;
+   }
+   
+   // TODO:
+   void begin10() {
+
+   }
+   
+   // TODO:
+   void begin11() {
+    
+   }
+   
+   void begin12() {
+      double a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      double c = sqrt(pow(a, 2) + pow(b, 2));
+      double P = a + b + c;
+      cout << "Гипотенуза прямоугольного треугольника = " << c << endl;
+      cout << "Периметр прямоугольного треугольника  = " << P << endl;
+   }
+   
+   void begin20() {
+      double x1, x2, y1, y2;
+      cout << "Введите координаты первой точки (x1, y1): ";
+      cin >> x1 >> y1;
+      cout << "Введите координаты второй точки (x2, y2): ";
+      cin >> x2 >> y2;
+      double length = sqrt(pow(x2 - x1, 2.0) + pow(y2 - y1, 2.0));
+      cout << "Расстояние между двумя точками = " << length << endl;
+   }
+   
+   void begin22() {
+      double a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      cout << "До перемещения: " << a << " " << b << endl;
+      double temp = b;
+      b = a;
+      a = temp;
+      cout << "После перемещения: " << a << " " << b << endl;
+   }
+   
+   void begin23() {
+      // a->b, b->c, c->a
+      double a, b, c;
+      cout << "Введите a, b, c: ";
+      cin >> a >> b >> c;
+      cout << "До перемещения: " << a << " " << b << " " << c << endl;
+      double temp = b;
+      b = a;
+      a = c;
+      c = temp;
+      cout << "После перемещения: " << a << " " << b << " " << c << endl;
+   }
+   
+   void begin24() {
+      double a, b, c;
+      cout << "Введите a, b, c: ";
+      cin >> a >> b >> c;
+      cout << "До перемещения: " << a << " " << b << " " << c << endl;
+      double temp = c;
+      c = a;
+      a = b;
+      b = temp;
+      cout << "После перемещения: " << a << " " << b << " " << c << endl;
+   }
+   
+   void begin25() {
+      double x;
+      cout << "Введите x: ";
+      cin >> x;
+      double y = 3 * pow(x, 6) - 6 * pow(x, 2) - 7;
+      cout << "Значение функции: " << y << endl;
+   }
+   
+   void begin26() {
+      double x;
+      cout << "Введите x: ";
+      cin >> x;
+      double y = 4 * pow(x - 3, 6) - 7 * pow(x - 3, 3) + 2;
+      cout << "Значение функции: " << y << endl;
+   }
+   
+   void begin29() {
+      double a;
+      cout << "Введите значение угла в градусах (0 < a < 360): ";
+      cin >> a;
+      double y = (a * pi) / 180;
+      cout << "Значение угла в радианах: " << y << endl;
+   }
+   
+   void begin30() {
+      double a;
+      cout << "Введите значение угла в радианах (0 < a < 2pi): ";
+      cin >> a;
+      double y = (a * 180) / pi;
+      cout << "Значение угла в градусах: " << y << endl;
+   }
+   
+   void begin31() {
+      double tf;
+      cout << "Введите температуру в градусах Фаренгейта: ";
+      cin >> tf;
+      double tc = (tf - 32) * 5 / 9;
+      cout << "Температура в градусах Цельсия: " << tc << endl;
+   }
+   
+   void begin32() {
+      double tс;
+      cout << "Введите температуру в градусах Цельсия: ";
+      cin >> tс;
+      double tf = (tс * 9 / 5) + 32;
+      cout << "Температура в градусах Фаренгейта: " << tf << endl;
+   }
+}
+
+namespace part_4 {
+   void integer6() {
+      int number;
+      cout << "Введите число: ";
+      cin >> number;
+      cout << "Десятки: " << number / 10 << endl;
+      cout << "Единицы: " << number % 10 << endl;
+   }
+   
+   void integer7() {
+      int number;
+      cout << "Введите число: ";
+      cin >> number;
+      int firstNumber = number / 10;
+      int secondNumber = number % 10;
+      cout << "Сумма: " << firstNumber + secondNumber << endl;
+      cout << "Произведение: " << firstNumber * secondNumber << endl;
+   }
+   
+   void integer8() {
+      int number;
+      cout << "Введите число: ";
+      cin >> number;
+      number = number % 10 * 10 + number / 10;
+//      int firstNumber = number / 10;
+//      int secondNumber = number % 10;
+//      cout << "Зеркальное число: " << secondNumber * 10 + firstNumber << endl;
+      cout << "Зеркальное число: " << number << endl;
+   }
+   
+   void integer9() {
+      int number;
+      cout << "Введите число: ";
+      cin >> number;
+      cout << "Сотни: " << number / 100 << endl;
+   }
+}
+
+namespace part_5 {
+   int a = 0;
+   bool boolean1 = a > 0;
+   bool boolean2 = a % 2 == 0;
+   int b;
+   bool boolean3 = a > 2 && b <= 3;
+   bool boolean4 = a >= 0 || b < -2;
+   int c;
+   bool boolean7 = a < b && b < c;
+   bool boolean8 = a % 2 != 0 && b % 2 != 0;
+   bool boolean9 = a % 2 != 0 || b % 2 != 0;
+}
+
+namespace part_6 {
+   void if1() {
+      int a = 0;
+      cout << "Введите a: " << endl;
+      cin >> a;
+      if (a > 0) {
+         a++;
+      }
+      
+      cout << a << endl;
+   }
+   
+   void if2() {
+      int a = 0;
+      cout << "Введите a: " << endl;
+      cin >> a;
+      if (a > 0) {
+         a++;
+      } else {
+         a -= 2;
+      }
+      
+      cout << a << endl;
+   }
+   
+   void if3() {
+      int a = 0;
+      cout << "Введите a: " << endl;
+      cin >> a;
+      if (a > 0) {
+         a++;
+      } else if (a < 0) {
+         a -= 2;
+      } else {
+         a = 10;
+      }
+      
+      cout << a << endl;
+   }
+   
+   void if4() {
+      int a, b, c;
+      int numberOfPositive = 0;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      
+      if (a > 0) { numberOfPositive++; }
+      if (b > 0) { numberOfPositive++; }
+      if (c > 0) { numberOfPositive++; }
+      
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+      cout << "Количество положительных чисел в наборе: " << numberOfPositive << endl;
+   }
+   
+   void if5() {
+      int a, b, c;
+      int numberOfPositive = 0;
+      int numberOfNegative = 0;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      
+      if (a > 0) { numberOfPositive++; }
+      if (b > 0) { numberOfPositive++; }
+      if (c > 0) { numberOfPositive++; }
+      
+      if (a < 0) { numberOfNegative++; }
+      if (b < 0) { numberOfNegative++; }
+      if (c < 0) { numberOfNegative++; }
+      
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+      cout << "Количество положительных чисел в наборе: " << numberOfPositive << endl;
+      cout << "Количество отрицательных чисел в наборе: " << numberOfNegative << endl;
+   }
+   
+   void if6() {
+      int a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      if (a > b) {
+         cout << a << endl;
+      } else {
+         cout << b << endl;
+      }
+   }
+   
+   void if7() {
+      int a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      if (a > b) {
+         cout << "1" << endl;
+      } else {
+         cout << "2" << endl;
+      }
+   }
+   
+   void if8() {
+      int a, b;
+      cout << "Введите a и b: ";
+      cin >> a >> b;
+      if (a > b) {
+         cout << a << " " << b << endl;
+      } else {
+         cout << b << " " << a << endl;
+      }
+   }
+   
+   void if9() {
+      /*
+       Даны две переменные вещественного типа: A, B. Перераспределить значения данных переменных так, чтобы в A оказалось меньшее из значений, а в B — большее. Вывести новые значения переменных A и B.
+       */
+      double a, b;
+      cout << "Введите a, b (через пробел): ";
+      cin >> a >> b;
+      cout << "Исходный набор чисел: " << a << ", " << b << "." << endl;
+      
+      double temp = a;
+      if (a > b) {
+         a = b;
+         b = temp;
+      }
+
+      cout << a << " " << b << endl;
+   }
+   
+   void if10() {
+      /*
+       Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной сумму этих значений, а если равны, то при- своить переменным нулевые значения. Вывести новые значения переменных A и B.
+       */
+      int a, b;
+      cout << "Введите a, b (через пробел): ";
+      cin >> a >> b;
+      cout << "Исходный набор чисел: " << a << ", " << b << "." << endl;
+      
+      if (a != b) {
+         int sum = a + b;
+         a = sum;
+         b = sum;
+      } else if (a == b) {
+         a = 0;
+         b = 0;
+      }
+      
+      cout << a << " " << b << endl;
+   }
+   
+   void if11() {
+      /*
+       Даны две переменные целого типа: A и B. Если их значения не равны, то присвоить каждой переменной большее из этих значений, а если равны, то присвоить переменным нулевые значения. Вывести новые значения пере- менных A и B.
+       */
+      
+      int a, b;
+      cout << "Введите a, b (через пробел): ";
+      cin >> a >> b;
+
+      if (a != b) {
+         if (a > b) {
+            b = a;
+         } else {
+            a = b;
+         }
+      } else if (a == b) {
+         a = 0;
+         b = 0;
+      }
+      
+      cout << "Новые значения переменных: " << a << ", " << b << endl;
+   }
+   
+   void if12() {
+      int a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+      
+      if (a < b && a < c) {
+         cout << a << endl;
+      } else if (b < c) {
+         cout << b << endl;
+      } else {
+         cout << c << endl;
+      }
+   }
+   
+   void if13() {
+      int a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+   }
+   
+   void if14() {
+      int a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+   }
+   
+   void if15() {
+      int a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+   }
+   
+   void if16() {
+      double a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+      
+      if (a < b && b < c) {
+         a *= 2;
+         b *= 2;
+         c *= 2;
+      } else {
+         a = -a;
+         b = -b;
+         c = -c;
+      }
+      
+      cout << "Новые значения переменных: " << a << ", " << b << ", " << c << "." << endl;
+   }
+   
+   void if17() {
+      double a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+      
+      if ((a < b && b < c) || (a > b && b > c)) {
+         a *= 2;
+         b *= 2;
+         c *= 2;
+      } else {
+         a = -a;
+         b = -b;
+         c = -c;
+      }
+      
+      cout << "Новые значения переменных: " << a << ", " << b << ", " << c << "." << endl;
+   }
+   
+   void if18() {
+      int a, b, c;
+      cout << "Введите a, b, c (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный набор чисел: " << a << ", " << b << ", " << c << "." << endl;
+      
+      if (a == b) {
+         cout << "3" << endl;
+      } else if (a == c) {
+         cout << "2" << endl;
+      } else {
+         cout << "1" << endl;
+      }
+   }
+   
+   // TODO
+   void if19(){
+      
+   }
+   
+   void if20(){
+      double a, b, c;
+      cout << "Введите точки A, B и C (через пробел): ";
+      cin >> a >> b >> c;
+      cout << "Исходный точки: " << a << ", " << b << ", " << c << "." << endl;
+      
+      if (b - a > c - a) {
+         cout << "Точка С расположена ближе к точке А" << endl;
+      } else {
+         cout << "Точка B расположена ближе к точке А" << endl;
+      }
+   }
+   
+   void if22() {
+      int x, y;
+      cout << "Введите координаты точки (x, y): ";
+      cin >> x >> y;
+      
+      if (x > 0 && y > 0) { cout << "I" << endl; }
+      if (x < 0 && y > 0) { cout << "II" << endl; }
+      if (x < 0 && y < 0) { cout << "III" << endl; }
+      if (x > 0 && y < 0) { cout << "IV" << endl; }
+   }
+   
+   void if23() {
+      /*
+       5|
+       4|
+       3|
+       2|
+       1|_ _ _ _ _ _ __________
+         1 2 3 4 5 6 7 |89
+       */
+      
+      /*(1,1)
+      (1, 3)
+       (4, 3)
+       (4, 1)
+       */
+      int x1, y1,
+      x2, y2,
+      x3, y3,
+      x4, y4;
+      cout << "Введите координаты точки 1 (x, y): ";
+      cin >> x1 >> y1;
+      cout << "Введите координаты точки 2 (x, y): ";
+      cin >> x2 >> y2;
+      cout << "Введите координаты точки 3 (x, y): ";
+      cin >> x3 >> y3;
+
+      x4 = x1 + x3 - x2;
+      y4 = y1 + y3 - y2;
+      cout << "Координаты четвертой точки (x, y): ";
+      cout << x4 << " " << y4 << endl;
+   }
+   
+   void if24() {
+      double x = 0;
+      cout << "Введите x: ";
+      cin >> x;
+      
+      double fx = 0;
+      
+      if (x > 0) {
+         fx = 2 * sin(x);
+      }
+      
+      if (x <= 0) {
+         fx = 6 - x;
+      }
+      
+      cout << fx << endl;
+   }
+   
+   void if25() {
+      double x = 0;
+      cout << "Введите x: ";
+      cin >> x;
+      
+      double fx = 0;
+      
+      if (x < -2 || x > 2) {
+         fx = 2 * x;
+      } else {
+         fx = -3 * x;
+      }
+      
+      cout << fx << endl;
+   }
+   
+   void if26() {
+      double x = 0;
+      cout << "Введите x: ";
+      cin >> x;
+      
+      double fx = 0;
+      
+      if (x <= 0) {
+         fx = -x;
+      } else if (x > 0 && x < 2) {
+         fx = pow(x, 2);
+      } else if (x >= 2) {
+         fx = 4;
+      }
+      
+      cout << fx << endl;
+   }
+   
+   void if29() {
+      int a = 0;
+      cout << "Введите a: ";
+      cin >> a;
+      string description = "";
+      cout << "Исходное число: " << a << endl;
+   }
+   
+   void if30() {
+      int a = 0;
+      cout << "Введите a: ";
+      cin >> a;
+      string description = "";
+      cout << "Исходное число: " << a << endl;
+      
+      if (a % 2 == 0) {
+         description += "Четное ";
+      } else {
+         description += "Нечетное ";
+      }
+      
+      if (a / 100 == 0) {
+         description += "двузначное ";
+      } else {
+         description += "трехзначное ";
+      }
+      
+      description += "число";
+      
+      cout << description << endl;
+   } 
+
+   void if30v2() {
+      int a = 0;
+      cout << "Введите a: ";
+      cin >> a;
+      cout << "Исходное число: " << a << endl;
+
+      if (a % 2 == 0) {
+         if (a / 100 == 0) {
+            cout << "Четное двузначное число" << endl;
+         } else {
+            cout << "Четное трехзначное число" << endl;
+         }
+      } else if (a / 100 == 0) {
+            cout << "Нечетное двузначное число" << endl;
+      } else {
+         cout << "Нечетное трехзначное число" << endl;
+      }
+   }
+}
+
+namespace part_7 {
+   void case1() {
+      int a;
+      cout << "Введите номер дня недели: ";
+      cin >> a;
+      
+      switch (a) {
+         case 1: {
+            cout << "Понедельник" << endl;
+            break;
+         }
+            
+         case 2: {
+            cout << "Вторник" << endl;
+            break;
+         }
+         case 3: {
+            cout << "Среда" << endl;
+//            break;
+         }
+         case 4: {
+            cout << "Четверг" << endl;
+//            break;
+         }
+         case 5: {
+            cout << "Пятница" << endl;
+//            break;
+         }
+         case 6: {
+            cout << "Суббота" << endl;
+            break;
+         }
+         case 7: {
+            cout << "Воскресенье" << endl;
+            break;
+         }
+            
+         default: {
+            cout << "Неверный день недели" << endl;
+            break;
+         }
+      }
+   }
+   
+   void additional1() {
+      int f;
+      double x, fx;
+      cout << "Выберите функцию fx: ";
+      cin >> f;
+      cout << "Введите значение x: ";
+      cin >> x;
+      
+      switch (f) {
+         case 1:
+            fx = pow(x, 2);
+            break;
+            
+         case 2:
+            fx = -3 * x;
+            break;
+            
+         default:
+            fx = 1;
+            break;
+      }
+      
+      double s;
+      if (x > 0) {
+         s = 2 * fx;
+      } else {
+         s = 6 - fx;
+      }
+      
+      double v, y;
+      cout << "Введите значение y: ";
+      cin >> y;
+      v = y * s;
+      
+      cout << v << endl;
+   }
+}
+
+namespace part_8 {
+   void for7() {
+      int a, b;
+      cin >> a >> b;
+      int sum  = 0;
+      while (a <= b) {
+         sum += a;
+         a++;
+      }
+      
+      cout << sum << endl;
+   }
+   
+   void for7_2() {
+      int a, b;
+      cin >> a >> b;
+      // Сумма n членов арифметической прогрессии
+      int sum = ((a + b) * (b - a + 1)) / 2;
+      
+      cout << sum << endl;
+   }
+   
+   void for9() {
+      int a, b;
+      cin >> a >> b;
+      int sum  = 0;
+      while (a <= b) {
+         sum += a * a;
+         cout << a << " * " << a << " = " << a * a << endl;
+         a++;
+      }
+      
+      cout << sum << endl;
+   }
+   
+   void for10() {
+      int n;
+      cin >> n;
+      double sum = 1;
+      while (n != 1) {
+         sum += 1.0 / n--;
+      }
+      
+      cout << sum << endl;
+   }
+   
+   void for12() {
+      int n;
+      cin >> n;
+      double prod = 1;
+      while (n != 1) {
+         prod *= 1 + n-- / 10;
+         cout << prod << endl;
+      }
+      
+      cout << prod << endl;
+   }
+   
+   void for15() {
+      double a;
+      cin >> a;
+      int n;
+      cin >> n;
+      double product = 1;
+      
+      while (n) {
+         product *= a;
+         n--;
+      }
+      
+      cout << product << endl;
+   }
+   
+   void for17() {
+      double a;
+      cin >> a;
+      int n;
+      cin >> n;
+      double sum = 1;
+      while (n) {
+         sum += pow(a, n--);
+      }
+      
+      cout << sum << endl;
+   }
+   
+   void for19() {
+      int n;
+      cin >> n;
+      int result = 1;
+      while (n) {
+         result *= n--;
+      }
+      
+      cout << result << endl;
+   }
+   
+   // 15, 17, 19
+   
+   void rw() {
+      std::ofstream out;
+      out.open("./tx.txt");
+      for (int i = 0; i < 100000; i++) {
+         out << rand() << endl;
+      }
+   }
+}
+
+int main()
+{
+   part_8::rw();
+   return 0;
+}
+
+
+
+
+
+
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+namespace part_8 {
+    void For7 ()
+    {
+        int a, b;
+      cin >> a >> b;
+      int sum = 0;
+     for( int i = a; i <= b; i++) {
+         sum+=i;
+     }
+      cout<<sum<<endl;
+       
+    }
+    void For15 ()
+    {
+        double a;
+      cin >> a;
+      int n;
+      cin >> n;
+      double product = 1;
+     for(int i = n; i > 0; i--) {
+         product *= a;
+     }
+     cout<< product <<endl;
+    }
+    void For17 ()
+    {
+        double a;
+      cin >> a;
+      int n;
+      cin >> n;
+      double sum = 1.0;
+      for(int i = n; i; i--) {
+          sum += pow(a, i);
+      }
+      cout<< sum <<endl;
+    }
+    void For19 ()
+    {
+        int n;
+      cin >> n;
+      int result = 1;
+      for(int i=n;i;i--) {
+          result *= i;
+      }
+      
+      cout << result << endl;
+    }
+    void for20 ()
+    {
+        double c;
+        double n;
+        cin>>n;
+        double a = 1;
+        double b = 1;
+        for(double i=3; i<=n;i++) {
+            double c=a+b;
+            a=b;
+            b=c;
+        }
+        cout<<b<<endl;
+    }
+    void for21 ()
+    {
+        int n = 76;
+        for(int i=1; i<=n;i+=2) {
+            cout<<i<<endl;
+        }
+        
+        for(int d=2; d<=n;d+=2) {
+            cout<<d<<endl;
+        }
+    }
+    void for22 ()
+    {
+     int j;
+     for(int i=0, j=9; i<10; i++, j--) {
+         cout<<i<<" "<<j<<endl;
+         }
+        
+    }
+    void for23 ()
+    {
+        
+        for(int i=1; i<=100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                cout<<"fizzbuzz ";
+                continue;
+             }
+             if (i % 3 == 0) {
+                 cout<<"fizz ";
+                 continue;
+             }
+             if (i % 5 == 0) {
+                 cout<<"buzz ";
+                 continue;
+             }
+             
+             cout << i << " ";
+        }
+    }
+    void hggh ()
+    {
+        int a = 2.03 + 1;
+    }
+}
+
+int main()
+{
+    int a = 2.03 + 1.023;
+    cout << a << endl;
+    // part_8::for23 ();
+
+    return 0;
+}

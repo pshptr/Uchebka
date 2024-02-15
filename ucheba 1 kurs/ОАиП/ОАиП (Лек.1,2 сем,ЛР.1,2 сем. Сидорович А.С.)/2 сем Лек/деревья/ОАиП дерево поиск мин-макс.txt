@@ -1,0 +1,13 @@
+tree *min(tree *node)
+{
+	if (node->left == NULL)
+		return node;
+	return minimum(node->left);
+}
+
+tree *max(tree *node)
+{
+	if (node->right == NULL)
+		return node;
+	return max(node->right);
+}

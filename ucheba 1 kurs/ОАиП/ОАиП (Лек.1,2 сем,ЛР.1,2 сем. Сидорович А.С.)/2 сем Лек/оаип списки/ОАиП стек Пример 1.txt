@@ -1,0 +1,65 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+/* —оздать стек из натуральных чисел до N. 
+¬ывести на экран. */
+
+struct FILO {
+	int data;
+	struct FILO *next;
+};
+
+struct FILO *create(struct FILO *, int);  // присоединение элемента к голове, возврат адреса головы
+void print(struct FILO *); // просмотр стека
+
+int main() {
+	int i, n;
+	struct FILO *head;    // адрес, указывающий на голову стека
+	head = NULL;
+
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++) {
+		head = create(head, i);
+		printf("%2d <--- ", head->data);
+	}
+	printf("\n");
+	print(head);
+	free(head);
+}
+
+//struct FILO *create(struct FILO *head, int x) {
+//	struct FILO *n;    // указатель на новую структуру
+//	n = (struct FILO *)malloc(sizeof(struct FILO)); // выдел€ем пам€ть
+//	n->next = head;
+//	n->data = x;
+//	return n;
+//}
+struct FILO *create(struct FILO *head, int x) {
+	struct FILO *n;    // указатель на новую структуру
+	n = (struct FILO *)malloc(sizeof(struct FILO)); // выдел€ем пам€ть
+	n->next = NULL;
+	n->data = x;
+	if (head == NULL)
+		head = n;
+	else
+	{
+		n->next = head;
+		head = n;
+	}
+	return head;
+}
+
+
+void print(struct FILO *head){
+	struct FILO *p = head;
+	while (p != NULL) {   // пока не конец стека    
+		printf("%2d ---> ", p->data);
+		p = p->next;       // продвижение по списку
+	}
+	printf("\n");
+}
+

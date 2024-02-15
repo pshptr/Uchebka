@@ -1,0 +1,25 @@
+# include <stdio.h>
+// сумма элементов матрицы
+int main()
+{
+	int N, M, matr[100][100], i, j, S = 0;
+	printf("Input size\n");
+	scanf("%d%d", &N, &M);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < M; j++)
+			scanf("%d", &matr[i][j]);
+
+
+
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < M; j++)
+			S = S + matr[i][j];
+	}
+
+	printf("S= %d", S);
+
+		return 0;
+}

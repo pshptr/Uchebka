@@ -1,0 +1,106 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+/* œ‡‚ËÎ¸ÌÓÒÚ¸ ‡ÒÒÚ‡ÌÓ‚ÍË ÒÍÓ·ÓÍ */
+struct FILO {
+	char data;
+	struct FILO *next;
+};
+
+struct FILO *push(struct FILO *, char);  // ÔËÒÓÂ‰ËÌÂÌËÂ ˝ÎÂÏÂÌÚ‡ Í „ÓÎÓ‚Â, ‚ÓÁ‚‡Ú ‡‰ÂÒ‡ „ÓÎÓ‚˚
+struct FILO *create_down(struct FILO *head); // ÒÓÁ‰‡ÌËÂ ÒÚÂÍ‡ ÔÓ Û·˚‚‡ÌË˛, ‚ÓÁ‚‡Ú „ÓÎÓ‚˚
+void print(struct FILO *); // ÔÓÒÏÓÚ ÒÚÂÍ‡
+struct FILO *pop(struct FILO *);
+int brackets();
+
+int main() {
+	
+	if (brackets() == 1)
+		printf("Brackets are correct");
+	else printf("Brackets are wrong");
+	
+}
+
+
+
+int brackets()
+{
+	struct FILO *head;
+	head = NULL;
+	char *str = (char*)calloc(1, 1);
+	gets(str);
+	int n = strlen(str);
+	
+	for (int i = 0; i < n; i++)
+	{
+		if (str[i] == '(')
+			head = push(head, str[i]);
+		if (str[i] == ')')
+		{
+			if (head->data == '(')
+				head = pop(head);
+			else return 0;
+		}
+
+	}
+	if (head == NULL)
+		return 1;
+	else return 0;
+
+}
+struct FILO *push(struct FILO *head, char x) {
+	struct FILO *n;    // ÛÍ‡Á‡ÚÂÎ¸ Ì‡ ÌÓ‚Û˛ ÒÚÛÍÚÛÛ
+	n = (struct FILO *)malloc(sizeof(struct FILO)); // ‚˚‰ÂÎˇÂÏ Ô‡ÏˇÚ¸
+	n->next = NULL;
+	n->data = x;
+	if (head == NULL)
+		head = n;
+	else
+	{
+		n->next = head;
+		head = n;
+	}
+	return head;
+}
+
+
+void print(struct FILO *head){
+	struct FILO *p = head;
+	while (p != NULL) {   // ÔÓÍ‡ ÌÂ ÍÓÌÂˆ ÒÚÂÍ‡    
+		printf("%2c ---> ", p->data);
+		p = p->next;       // ÔÓ‰‚ËÊÂÌËÂ ÔÓ ÒÔËÒÍÛ
+	}
+	printf("\n");
+}
+
+
+struct FILO *pop(struct FILO * head)
+{
+	if (head != NULL)
+	{
+		head = head->next;
+		return head;
+	}
+	else return NULL;
+
+}
+
+/* П�авильность �асстановки скобок */
+
+// п�исоединение элемента к голове, возв�ат ад�еса головы
+
+// создание стека по убыванию, возв�ат головы
+
+// п�осмот� стека
+
+// указатель на новую ст�укту�у
+
+// выделяем память
+
+// пока не конец стека 
+
+// п�одвижение по списку

@@ -1,0 +1,6 @@
+tree *minimum(tree *node)
+{
+	if (node->left == NULL)
+		return node;
+	return minimum(node->left);
+}

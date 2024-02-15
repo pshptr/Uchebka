@@ -1,0 +1,51 @@
+
+#include <iostream>
+
+using namespace std;
+
+   int Sign(double x)   {
+       if (x < 0) {
+           return -1;
+       }
+       if (x == 0) {
+           return 0;
+       }
+       if (x > 0) {
+           return 1;
+       }
+   }
+int main()
+{
+
+   
+   cout << Sign(3.14) << endl;
+      cout << Sign(5.14) << endl;
+         cout << Sign(6.14) << endl;
+            cout << Sign(-3.14) << endl;
+               cout << Sign(0) << endl;
+                  cout << Sign(3.14) << endl;
+                     cout << Sign(3.14) << endl;
+
+    return 0;
+}
+
+
+
+#include <iostream>
+
+using namespace std;
+
+ double powerA3(double a) {
+            return a*a*a;
+        }
+
+int main()
+{
+    cout << powerA3(3) << endl;
+     cout << powerA3(3.14) << endl;
+      cout << powerA3(5.28) << endl;
+       cout << powerA3(6.32) << endl;
+        cout << powerA3(8.14) << endl;
+
+    return 0;
+}

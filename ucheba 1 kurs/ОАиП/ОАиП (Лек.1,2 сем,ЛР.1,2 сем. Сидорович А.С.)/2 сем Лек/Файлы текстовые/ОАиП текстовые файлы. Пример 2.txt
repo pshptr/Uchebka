@@ -1,0 +1,39 @@
+int main()
+{
+    
+FILE *f;
+f = fopen("input.txt", "r");
+	if (f==NULL) 
+	{	
+		printf("Файл не найден... /n Для окончания работы нажмите любую клавишу...");
+		return 0;
+	}
+
+int n=0,y;
+int *a;
+
+while (!feof(f))
+{
+
+ 	int z = fscanf(f,"%d",&y);
+	if (!z) continue;
+	n++;
+}
+
+a = (int *) calloc (n, sizeof (int);
+
+rewind (f);
+
+
+for(int i=0;i<n;i++)
+	fscanf(f,"%d",&a[i]);
+
+printf("Прочитан массив: \n");
+
+for(int i=0;i<n;i++)
+     printf("%5d",a[i]);
+
+printf("\n");
+return 0;
+}
+

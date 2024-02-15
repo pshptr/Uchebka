@@ -1,0 +1,88 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+namespace part_7 {
+    void begin1()
+    {
+       /* ƒано целое число K. ¬ывести строку-описание оценки,
+        соответствую-щей числу K
+        (1 Ч Ђплохої, 2 Ч Ђнеудовлетворительної,
+        3 Ч Ђудовлетво-рительної, 4 Ч Ђхорошої, 5 Ч Ђотличної).
+        ≈сли K не лежит в диапазон*/
+        int K;
+        cout << "¬ведите номер " << endl;
+        cin >> K;
+        
+        switch (K) {
+            case 1: {
+                cout << "плохо" << endl;
+                break;
+            }
+            case 2: {
+                cout << "неудовлетворительно" << endl;
+                break;
+            }
+            case 3: {
+                cout << "удовлетворительно" << endl;
+                break;
+            }
+            
+            case 4: {
+                 cout << "хорошо" << endl;
+                 break;
+            }   
+            case 5: {
+                cout << "отлично" << endl;
+                break;
+            }
+        
+            default: {
+                cout << "ошибка" << endl;
+             }
+        }
+        
+
+
+
+ }
+ 
+         void begin2() 
+        {
+       
+          /*ƒан номер мес€цаЧ целое число в диапазоне1Ц12 
+          (1 Ч €нварь, 2 Ч  февраль и т. д.).
+          ¬ывести название соответствующего времени года
+          (Ђзи-маї, Ђвеснаї, Ђлетої, Ђосеньї).*/
+          int f;
+          cin >> f;
+        double fx,x;
+        cout<<"¬ведите значение х " << endl;
+        cin>>x;
+        
+        switch(f) {
+            case 1: {fx=pow(x,2); break;}
+            case 2: {fx=-3*x; break;}
+            default: {fx=1; break;}
+        }
+        double S;
+        if (x>0) {
+            S=2*fx;
+        } else {
+            S=6-fx;
+        }
+        double V,y;
+        cout<<"¬ведите значение y " << endl;
+        cin>>y;
+        V=y*S;
+        cout << V << endl;
+    }
+    
+}
+
+int main()
+{
+    part_7::begin2();
+    return 0;
+}

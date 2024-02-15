@@ -1,0 +1,89 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/*—оздать стек из чисел введенных пользователем.
+ ¬ывести на экран.
+”далить первые K чисел */
+
+
+struct FILO {
+	int data;
+	struct FILO *next;
+};
+
+struct FILO *create(struct FILO *, int);  // присоединение элемента к голове, возврат адреса головы
+void print(struct FILO *); // просмотр стека
+struct FILO *pop(struct FILO *);
+
+int main() {
+	int a, k;
+	struct FILO *head;    // адрес, указывающий на голову стека
+	head = NULL;
+
+	while (scanf("%d", &a))
+	{
+		head = create(head, a);		
+	}
+	printf("\n");
+	print(head);
+	fflush(stdin);
+	scanf("%d", &k);
+	while (k != 0 && head != NULL)
+	{
+		head = pop(head);
+		k--;
+	}
+	
+	print(head);
+
+	free(head);
+}
+
+//struct FILO *create(struct FILO *head, int x) {
+//	struct FILO *n;    // указатель на новую структуру
+//	n = (struct FILO *)malloc(sizeof(struct FILO)); // выдел€ем пам€ть
+//	n->next = head;
+//	n->data = x;
+//	return n;
+//}
+struct FILO *create(struct FILO *head, int x) {
+	struct FILO *n;    // указатель на новую структуру
+	n = (struct FILO *)malloc(sizeof(struct FILO)); // выдел€ем пам€ть
+	n->next = NULL;
+	n->data = x;
+	if (head == NULL)
+		head = n;
+	else
+	{
+		n->next = head;
+		head = n;
+	}
+	return head;
+}
+
+
+void print(struct FILO *head){
+	struct FILO *p = head;
+	while (p != NULL) {   // пока не конец стека    
+		printf("%2d ---> ", p->data);
+		p = p->next;       // продвижение по списку
+	}
+	printf("\n");
+}
+
+
+struct FILO *pop(struct FILO * head)
+{
+	if (head != NULL)
+	{
+		head = head->next;
+		return head;
+	}
+	else return NULL;
+
+}

@@ -1,0 +1,34 @@
+# include <stdio.h>
+// Найти сумму  элементов под главной диагональю в квадратной матрице
+// summa elmentov pod glav diag
+int main()
+{
+	int N, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d", &N);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < N; j++)
+			scanf("%d", &matr[i][j]);
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < N; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+
+	
+	
+	for (i = 0; i < N-1; i++)
+	{
+		for (j = i+1; j < N; j++)
+			S += matr[i][j];
+		
+	}
+
+
+	printf("summ= %d", S);
+
+		return 0;
+}

@@ -1,0 +1,44 @@
+# include <stdio.h>
+// otsortirovat k-uy stroku matr po ubivaniu
+
+int main()
+{
+	int N, M, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d%d", &N, &M);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < M; j++)
+			scanf("%d", &matr[i][j]);
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < M; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+
+	printf("Input number of line\n");
+	scanf("%d", &k);
+
+
+	for (i = 0; i < M; i++)
+		for (j=0;j<M;j++)
+			if (matr[k - 1][j] < matr[k - 1][i])
+			{
+				int temp = matr[k - 1][j];
+				matr[k - 1][j] = matr[k - 1][i];
+				matr[k - 1][i] = temp;
+			}
+	
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < M; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+
+
+
+	return 0;
+}

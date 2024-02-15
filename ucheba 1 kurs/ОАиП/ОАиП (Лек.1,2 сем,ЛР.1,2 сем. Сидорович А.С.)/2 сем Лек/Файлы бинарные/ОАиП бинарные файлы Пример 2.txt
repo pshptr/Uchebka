@@ -1,0 +1,58 @@
+/*Дан бинарный файл, содержащий записи со следующими полями:
+ФИО студента (строка 30 символов),
+Курс (целое число)
+Средний балл (вещественное число).
+
+Переписать файл, упорядочив записи по курсу,  а  внутри  курса –  по фамилии.
+*/
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+
+typedef struct {
+	char fio[30]; int kurs;  double ball;
+} STUDENT;
+
+int Cmp(const void *p1, const void *p2)
+{
+	STUDENT *s1 = (STUDENT *)p1, *s2 = (STUDENT *)p2;
+	if (s1->kurs != s2->kurs) 
+		return s1->kurs - s2->kurs;
+	return strcmp(s1->fio, s2->fio);
+}
+int main()
+{
+	
+	FILE *f = fopen("input.bin","rb+");
+	if (!f) 
+	{ 
+		printf("Файл не найден!\n"); 
+		return 1; 
+	}
+
+	long int num = 0;
+	fseek(f, 0, 2); 
+	num = ftell(f); 
+	rewind(f);
+	
+	if (num%sizeof(STUDENT)) 
+	{
+		printf("Invalid file!\n"); 
+		fclose(f); 
+		return 1;
+	}
+
+	num /= sizeof(STUDENT);
+	
+	STUDENT *mas;
+	mas = (STUDENT *)calloc(num, sizeof (STUDENT));
+	fread(mas, sizeof(STUDENT), num, f);
+	rewind(f);
+	qsort(mas, num, sizeof(STUDENT), Cmp);
+	fwrite(mas, num, sizeof(STUDENT), f);
+	fclose(f);
+	return 0;
+}

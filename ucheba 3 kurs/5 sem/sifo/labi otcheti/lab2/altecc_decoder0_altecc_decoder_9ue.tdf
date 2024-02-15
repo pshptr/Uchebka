@@ -1,0 +1,107 @@
+--altecc_decoder CBX_AUTO_BLACKBOX="ALL" device_family="Stratix II" lpm_pipeline=0 width_codeword=16 width_dataword=11 data err_corrected err_detected err_fatal q
+--VERSION_BEGIN 9.1SP2 cbx_altecc_decoder 2010:03:24:20:43:42:SJ cbx_cycloneii 2010:03:24:20:43:43:SJ cbx_lpm_add_sub 2010:03:24:20:43:43:SJ cbx_lpm_compare 2010:03:24:20:43:43:SJ cbx_lpm_decode 2010:03:24:20:43:43:SJ cbx_mgl 2010:03:24:21:01:05:SJ cbx_stratix 2010:03:24:20:43:43:SJ cbx_stratixii 2010:03:24:20:43:43:SJ  VERSION_END
+
+
+-- Copyright (C) 1991-2010 Altera Corporation
+--  Your use of Altera Corporation's design tools, logic functions 
+--  and other software and tools, and its AMPP partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Altera Program License 
+--  Subscription Agreement, Altera MegaCore Function License 
+--  Agreement, or other applicable license agreement, including, 
+--  without limitation, that your use is for the sole purpose of 
+--  programming logic devices manufactured by Altera and sold by 
+--  Altera or its authorized distributors.  Please refer to the 
+--  applicable agreement for further details.
+
+
+FUNCTION lpm_decode (aclr, clken, clock, data[LPM_WIDTH-1..0], enable)
+WITH ( CASCADE_CHAIN, IGNORE_CASCADE_BUFFERS, LPM_DECODES, LPM_PIPELINE, LPM_WIDTH)
+RETURNS ( eq[LPM_DECODES-1..0]);
+
+--synthesis_resources = lpm_decode 1 mux21 11 
+SUBDESIGN altecc_decoder0_altecc_decoder_9ue
+( 
+	data[15..0]	:	input;
+	err_corrected	:	output;
+	err_detected	:	output;
+	err_fatal	:	output;
+	q[10..0]	:	output;
+) 
+VARIABLE 
+	error_bit_decoder : lpm_decode
+		WITH (
+			LPM_DECODES = 16,
+			LPM_WIDTH = 4
+		);
+	mux21_0_dataout	:	WIRE;
+	mux21_1_dataout	:	WIRE;
+	mux21_10_dataout	:	WIRE;
+	mux21_2_dataout	:	WIRE;
+	mux21_3_dataout	:	WIRE;
+	mux21_4_dataout	:	WIRE;
+	mux21_5_dataout	:	WIRE;
+	mux21_6_dataout	:	WIRE;
+	mux21_7_dataout	:	WIRE;
+	mux21_8_dataout	:	WIRE;
+	mux21_9_dataout	:	WIRE;
+	data_bit	: WIRE;
+	data_t[10..0]	: WIRE;
+	data_wire[15..0]	: WIRE;
+	decode_output[15..0]	: WIRE;
+	err_corrected_wire	: WIRE;
+	err_detected_wire	: WIRE;
+	err_fatal_wire	: WIRE;
+	parity_01_wire[7..0]	: WIRE;
+	parity_02_wire[3..0]	: WIRE;
+	parity_03_wire[1..0]	: WIRE;
+	parity_04_wire[0..0]	: WIRE;
+	parity_bit	: WIRE;
+	parity_final_wire[14..0]	: WIRE;
+	parity_t[3..0]	: WIRE;
+	q_wire[10..0]	: WIRE;
+	syn_bit	: WIRE;
+	syn_e	: WIRE;
+	syn_t[2..0]	: WIRE;
+	syndrome[4..0]	: WIRE;
+
+BEGIN 
+	error_bit_decoder.data[3..0] = syndrome[3..0];
+	mux21_0_dataout = syndrome[4..4] & (decode_output[3..3] $ data_wire[0..0]) # !(syndrome[4..4]) & data_wire[0..0];
+	mux21_1_dataout = syndrome[4..4] & (decode_output[5..5] $ data_wire[1..1]) # !(syndrome[4..4]) & data_wire[1..1];
+	mux21_10_dataout = syndrome[4..4] & (decode_output[15..15] $ data_wire[10..10]) # !(syndrome[4..4]) & data_wire[10..10];
+	mux21_2_dataout = syndrome[4..4] & (decode_output[6..6] $ data_wire[2..2]) # !(syndrome[4..4]) & data_wire[2..2];
+	mux21_3_dataout = syndrome[4..4] & (decode_output[7..7] $ data_wire[3..3]) # !(syndrome[4..4]) & data_wire[3..3];
+	mux21_4_dataout = syndrome[4..4] & (decode_output[9..9] $ data_wire[4..4]) # !(syndrome[4..4]) & data_wire[4..4];
+	mux21_5_dataout = syndrome[4..4] & (decode_output[10..10] $ data_wire[5..5]) # !(syndrome[4..4]) & data_wire[5..5];
+	mux21_6_dataout = syndrome[4..4] & (decode_output[11..11] $ data_wire[6..6]) # !(syndrome[4..4]) & data_wire[6..6];
+	mux21_7_dataout = syndrome[4..4] & (decode_output[12..12] $ data_wire[7..7]) # !(syndrome[4..4]) & data_wire[7..7];
+	mux21_8_dataout = syndrome[4..4] & (decode_output[13..13] $ data_wire[8..8]) # !(syndrome[4..4]) & data_wire[8..8];
+	mux21_9_dataout = syndrome[4..4] & (decode_output[14..14] $ data_wire[9..9]) # !(syndrome[4..4]) & data_wire[9..9];
+	data_bit = data_t[10..10];
+	data_t[] = ( (data_t[9..9] # decode_output[15..15]), (data_t[8..8] # decode_output[14..14]), (data_t[7..7] # decode_output[13..13]), (data_t[6..6] # decode_output[12..12]), (data_t[5..5] # decode_output[11..11]), (data_t[4..4] # decode_output[10..10]), (data_t[3..3] # decode_output[9..9]), (data_t[2..2] # decode_output[7..7]), (data_t[1..1] # decode_output[6..6]), (data_t[0..0] # decode_output[5..5]), decode_output[3..3]);
+	data_wire[] = data[];
+	decode_output[] = error_bit_decoder.eq[];
+	err_corrected = err_corrected_wire;
+	err_corrected_wire = ((syn_bit & syn_e) & data_bit);
+	err_detected = err_detected_wire;
+	err_detected_wire = (syn_bit & (! (syn_e & parity_bit)));
+	err_fatal = err_fatal_wire;
+	err_fatal_wire = (err_detected_wire & (! err_corrected_wire));
+	parity_01_wire[] = ( (data_wire[10..10] $ parity_01_wire[6..6]), (data_wire[8..8] $ parity_01_wire[5..5]), (data_wire[6..6] $ parity_01_wire[4..4]), (data_wire[4..4] $ parity_01_wire[3..3]), (data_wire[3..3] $ parity_01_wire[2..2]), (data_wire[1..1] $ parity_01_wire[1..1]), (data_wire[0..0] $ parity_01_wire[0..0]), data_wire[11..11]);
+	parity_02_wire[] = ( ((data_wire[9..9] $ data_wire[10..10]) $ parity_02_wire[2..2]), ((data_wire[5..5] $ data_wire[6..6]) $ parity_02_wire[1..1]), ((data_wire[2..2] $ data_wire[3..3]) $ parity_02_wire[0..0]), (data_wire[12..12] $ data_wire[0..0]));
+	parity_03_wire[] = ( ((((data_wire[7..7] $ data_wire[8..8]) $ data_wire[9..9]) $ data_wire[10..10]) $ parity_03_wire[0..0]), (((data_wire[13..13] $ data_wire[1..1]) $ data_wire[2..2]) $ data_wire[3..3]));
+	parity_04_wire[] = ( (((((((data_wire[14..14] $ data_wire[4..4]) $ data_wire[5..5]) $ data_wire[6..6]) $ data_wire[7..7]) $ data_wire[8..8]) $ data_wire[9..9]) $ data_wire[10..10]));
+	parity_bit = parity_t[3..3];
+	parity_final_wire[] = ( (data_wire[14..14] $ parity_final_wire[13..13]), (data_wire[13..13] $ parity_final_wire[12..12]), (data_wire[12..12] $ parity_final_wire[11..11]), (data_wire[11..11] $ parity_final_wire[10..10]), (data_wire[10..10] $ parity_final_wire[9..9]), (data_wire[9..9] $ parity_final_wire[8..8]), (data_wire[8..8] $ parity_final_wire[7..7]), (data_wire[7..7] $ parity_final_wire[6..6]), (data_wire[6..6] $ parity_final_wire[5..5]), (data_wire[5..5] $ parity_final_wire[4..4]), (data_wire[4..4] $ parity_final_wire[3..3]), (data_wire[3..3] $ parity_final_wire[2..2]), (data_wire[2..2] $ parity_final_wire[1..1]), (data_wire[1..1] $ parity_final_wire[0..0]), (data_wire[15..15] $ data_wire[0..0]));
+	parity_t[] = ( (parity_t[2..2] # decode_output[8..8]), (parity_t[1..1] # decode_output[4..4]), (parity_t[0..0] # decode_output[2..2]), decode_output[1..1]);
+	q[] = q_wire[];
+	q_wire[] = ( mux21_10_dataout, mux21_9_dataout, mux21_8_dataout, mux21_7_dataout, mux21_6_dataout, mux21_5_dataout, mux21_4_dataout, mux21_3_dataout, mux21_2_dataout, mux21_1_dataout, mux21_0_dataout);
+	syn_bit = syn_t[2..2];
+	syn_e = syndrome[4..4];
+	syn_t[] = ( (syn_t[1..1] # syndrome[3..3]), (syn_t[0..0] # syndrome[2..2]), (syndrome[0..0] # syndrome[1..1]));
+	syndrome[] = ( parity_final_wire[14..14], parity_04_wire[0..0], parity_03_wire[1..1], parity_02_wire[3..3], parity_01_wire[7..7]);
+END;
+--VALID FILE

@@ -1,0 +1,27 @@
+# include <stdio.h>
+// ÒÛÏÏ‡ ˝ÎÂÏÂÌÚÓ‚ k -Ó„Ó ÒÚÓÎ·ˆ‡ Ï‡ÚËˆ˚
+
+// сумма элементов k -ого столбца мат�ицы
+int main()
+{
+	int N, M, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d%d", &N, &M);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < M; j++)
+			scanf("%d", &matr[i][j]);
+
+
+	printf("Input number of column\n");
+	scanf("%d", &k);
+
+	
+		for (i = 0; i < N; i++)
+			S += matr[i][k-1];
+	
+
+	printf("S= %d", S);
+
+		return 0;
+}

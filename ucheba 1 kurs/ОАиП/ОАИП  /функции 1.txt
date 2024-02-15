@@ -1,0 +1,76 @@
+
+# include <stdio.h>
+// proizv nechet elementov
+//произв неч. элем
+void mem_init1(int n, int **m);
+int * input ( int *m, int n);
+void output ( int *m, int n);
+double mult_odd (int *m, int n);
+bool odd(int a);
+
+int main()
+{
+	int *a, *b, n, m, i, p;
+
+	scanf ("%d", &n);
+	scanf ("%d", &m);
+
+	mem_init1(n,&a);
+	mem_init1(m,&b);
+	
+	
+	a=input(a,n);
+	b=input(b,m);
+	
+	if (mult_odd (a,n) > mult_odd (b,m) )
+		output(a,n);
+	else	
+		output(b,m);
+
+	return 0;
+}
+int * input ( int *m, int n)
+{
+	for (int i=0; i<n; i++)
+		scanf("%d", m+i);
+	
+	return m;
+}
+
+void output ( int *m, int n)
+{
+	for (int i=0; i<n; i++)
+		printf("%d", m+i);	
+	
+}
+
+int * input ( int *m, int n)
+{
+	for (int i=0; i<n; i++)
+		scanf("%d", m+i);
+	
+	return m;
+}
+
+void mem_init1(int n, int **m)
+{		
+	*m= (int*)calloc(n,izeof(int));
+	
+}
+
+double mult_odd (int *m, int n)
+{
+	double p=1;
+	for (int i=0; i<n; i++)
+		if (odd(*(m+i)==TRUE)
+			p*=*(m+i);
+
+	return p;
+}
+
+bool odd(int a)
+{
+	if (a%2!=0)
+		return TRUE;
+	else return FALSE;
+}

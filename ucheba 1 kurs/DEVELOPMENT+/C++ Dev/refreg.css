@@ -1,0 +1,93 @@
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+namespace part_1 {
+    void begin1() {
+        int a=3;
+        intb;
+        
+        
+        
+        if(a > b) {
+            cout << a << endl;
+            cout << b << endl;
+        } else {
+            cout << b << endl;
+            cout << a << endl;
+        }
+    }
+    
+    void begin2() {
+        /*���� ��� ���������� ������������� ����: A, B.
+        ���������������� �������� ������ ���������� ���,
+        ����� � A ��������� ������� �� ��������,
+        � � B� �������. ������� ����� �������� ���������� A � B*/
+    
+        double a ,b;
+        cout<<"������� �����:"<<endl;
+        cin >> a >> b;
+        double temp= a;
+        if (a > b) {
+            a = b;
+            b = temp;
+        }
+        // if(b > a) {
+        //     temp = a;
+        //     a = b;
+        //     b = temp;
+            
+        // }
+        cout << a << endl;
+        cout << b << endl;
+    }
+    
+    void begin3(){
+       /* ���� ��� ���������� ������ ����: A � B.
+        ���� �� �������� �� �����, ��
+        ��������� ������ ���������� ����� ���� ��������,
+        � ���� �����, �� ��������� ���������� ������� ��������.*/
+    
+        double a, b, sum;
+        cout << "������� �����:" << endl; 
+        cin >> a >> b;
+
+        if (a != b) {
+            double sum = a + b;
+            a = sum;
+            b = sum;
+        } else if (a == b) {
+            a = 0;
+            b = 0;
+        }  
+         
+        cout << a << endl;
+        cout << b << endl;
+    }
+    
+    void begin4(){
+        /*���� ��� ���������� ������ ����: A � B.
+        ���� �� �������� �� �����, �� ���������
+        ������ ���������� ������� �� ���� ��������
+        , � ���� �����, �� ��������� ���������� ������� ��������.*/
+         double a, b, sum;
+        cout << "������� �����:" << endl;
+        cin >> a >> b;
+        if(a > b) {
+            b=a;
+        } else if(b > a) {
+            a=b;
+        } else if(a == b) {
+            a=0;
+            b=0;
+        }
+        cout << a << endl;
+        cout << b << endl;
+    }
+
+ }
+int main()
+ {   
+    part_1::begin4();
+    return 0;
+}

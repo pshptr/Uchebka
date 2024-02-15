@@ -1,0 +1,32 @@
+# include <stdio.h>
+// max el v katom stolbce matrici
+int main()
+{
+	int N, M, matr[100][100], i, j, S = 0, k;
+	printf("Input size\n");
+	scanf("%d%d", &N, &M);
+
+	for (i = 0; i < N; i++)
+		for (j = 0; j < M; j++)
+			scanf("%d", &matr[i][j]);
+
+	for (i = 0; i < N; i++)
+	{
+		for (j = 0; j < M; j++)
+			printf("%3d", matr[i][j]);
+		printf("\n");
+	}
+
+	printf("Input number of column\n");
+	scanf("%d", &k);
+
+	int max = matr[0][k-1];	
+	
+		for (i = 0; i < N; i++)
+			if (max < matr[i][k-1])
+				max = matr[i][k-1];
+
+	printf("max in %d column = %d",k, max);
+
+		return 0;
+}
