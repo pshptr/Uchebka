@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="lab8">
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_compare2:inst134|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_vij.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_decode1:inst28|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_p7f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_compare0:inst21|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_0jj.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_compare1:inst40|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_cig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_compare1:inst46|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_cig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_counter0:inst|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_4ai.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_decode0:inst11|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_p7f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_compare1:inst34|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_cig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_compare1:inst52|lpm_compare:lpm_compare_component" CBX_FILE_NAME="cmpr_cig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_counter1:inst22|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_a2k.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|cache:inst|lpm_counter2:inst133|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_6oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main|lpm_ram_dq0:inst1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_l9a1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
