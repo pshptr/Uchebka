@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Sat Apr 13 12:53:31 2024
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : Lab10_20
+Top-level Entity Name : MACHINE_A5
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 3
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 6
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

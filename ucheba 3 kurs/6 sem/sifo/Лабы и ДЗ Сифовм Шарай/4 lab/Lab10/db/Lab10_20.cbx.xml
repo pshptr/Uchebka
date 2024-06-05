@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Lab10_20">
+		<CBX_INST_ENTRY INSTANCE_NAME="|MACHINE_A5|lpm_constant0:inst23|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_7e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MACHINE_A5|lpm_constant1:inst16|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_4e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MACHINE_A5|lpm_constant2:inst17|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_5e6.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|MACHINE_A5|lpm_constant3:inst21|lpm_constant:lpm_constant_component" CBX_FILE_NAME="lpm_constant_6e6.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

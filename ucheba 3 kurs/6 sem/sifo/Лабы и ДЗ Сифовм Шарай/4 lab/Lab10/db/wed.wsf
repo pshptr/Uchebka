@@ -1,0 +1,2326 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+VECTOR("D:/SiFOVM/Lab10_20/MAIN.vwf")
+{
+	ZOOM{
+		ZBEGIN = 602400;
+		ZEND = 992400;
+		NUMERATOR = 975;
+		DENOMINATOR = 390000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 20000;
+		OFFSET = 10000;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 10;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 19;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[4]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 27;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10_20/MACHINE_A3.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 390000;
+		NUMERATOR = 975;
+		DENOMINATOR = 390000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 20000;
+		OFFSET = 10000;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cout";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "new_state";
+		INDEX = 7;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "new_state[1]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "new_state[0]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10_20/db/Lab10_20.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 288147;
+		ZEND = 1000000;
+		NUMERATOR = 793;
+		DENOMINATOR = 500000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[4]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[3]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[2]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[1]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[0]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 10;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 19;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[4]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 27;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10_16/db/Lab10_20.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 2000000;
+		ZEND = 3000000;
+		NUMERATOR = 1513;
+		DENOMINATOR = 1000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[3]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[2]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[1]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[0]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 9;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 18;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10_16/MAIN.vwf")
+{
+	ZOOM{
+		ZBEGIN = 2000000;
+		ZEND = 3000000;
+		NUMERATOR = 998;
+		DENOMINATOR = 1000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC";
+		INDEX = 1;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[3]";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[2]";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[1]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "PC[0]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 9;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 18;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10_14/db/Lab10_20.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1138964;
+		NUMERATOR = 1129;
+		DENOMINATOR = 1138964;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 13;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 20;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10_14/MAIN.vwf")
+{
+	ZOOM{
+		ZBEGIN = 1560000;
+		ZEND = 2358400;
+		NUMERATOR = 998;
+		DENOMINATOR = 798400;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 13;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 20;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10/db/Lab10_20.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 1378449;
+		ZEND = 3000000;
+		NUMERATOR = 793;
+		DENOMINATOR = 1138964;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 13;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[7]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[6]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[5]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[4]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 24;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/SiFOVM/Lab10/MAIN.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 798400;
+		NUMERATOR = 998;
+		DENOMINATOR = 798400;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "debug[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 13;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[7]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[6]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[5]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[4]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 24;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/уник/3 курс/6 сем/СИФО/4 lab/Lab10/MAIN.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 3000000;
+		NUMERATOR = 1033;
+		DENOMINATOR = 3000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("D:/уник/3 курс/6 сем/СИФО/4 lab/Lab10/db/Lab10_20.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 1125000;
+		ZEND = 1875000;
+		NUMERATOR = 1329;
+		DENOMINATOR = 750000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_req";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result_strob";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern";
+		INDEX = 4;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[7]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[6]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[5]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[4]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[3]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[2]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[1]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "pattern[0]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "predict_strob";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 15;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[1]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state[0]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}

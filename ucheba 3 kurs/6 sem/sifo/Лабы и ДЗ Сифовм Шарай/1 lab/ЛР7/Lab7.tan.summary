@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 23.513 ns
+From           : slave:inst7|lpm_dff0:inst3|lpm_ff:lpm_ff_component|dffs[3]
+To             : slave_data5[3]
+From Clock     : REQ[2]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 31.58 MHz ( period = 31.670 ns )
+From           : master:inst9|inst20
+To             : master:inst9|lpm_counter0:inst14|lpm_counter:lpm_counter_component|cntr_4pi:auto_generated|safe_q[1]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 0
+
+Type           : Clock Setup: 'REQ[2]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 102.04 MHz ( period = 9.800 ns )
+From           : master:inst8|inst20
+To             : master:inst8|inst20
+From Clock     : REQ[2]
+To Clock       : REQ[2]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'REQ[1]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 103.80 MHz ( period = 9.634 ns )
+From           : master:inst8|inst20
+To             : master:inst8|inst20
+From Clock     : REQ[1]
+To Clock       : REQ[1]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'REQ[0]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 121.01 MHz ( period = 8.264 ns )
+From           : master:inst8|inst20
+To             : master:inst8|inst20
+From Clock     : REQ[0]
+To Clock       : REQ[0]
+Failed Paths   : 0
+
+Type           : Clock Hold: 'REQ[2]'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : master:inst8|inst44
+To             : slave:inst12|lpm_dff0:inst3|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : REQ[2]
+To Clock       : REQ[2]
+Failed Paths   : 173
+
+Type           : Clock Hold: 'REQ[1]'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : master:inst8|inst44
+To             : slave:inst12|lpm_dff0:inst3|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : REQ[1]
+To Clock       : REQ[1]
+Failed Paths   : 173
+
+Type           : Clock Hold: 'clk'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : master:inst9|inst44
+To             : slave:inst11|lpm_dff0:inst3|lpm_ff:lpm_ff_component|dffs[1]
+From Clock     : clk
+To Clock       : clk
+Failed Paths   : 166
+
+Type           : Clock Hold: 'REQ[0]'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : master:inst9|inst44
+To             : slave:inst10|lpm_dff0:inst3|lpm_ff:lpm_ff_component|dffs[1]
+From Clock     : REQ[0]
+To Clock       : REQ[0]
+Failed Paths   : 132
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 644
+
+--------------------------------------------------------------------------------------
+

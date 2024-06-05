@@ -1,0 +1,153 @@
+|MACHINE_A5
+new_state[0] <= new_state.DB_MAX_OUTPUT_PORT_TYPE
+new_state[1] <= new_state.DB_MAX_OUTPUT_PORT_TYPE
+result => inst25.IN0
+result => inst24.IN0
+result => inst42.IN0
+result => inst29.IN0
+result => inst40.IN0
+result => inst33.IN0
+result => inst35.IN0
+result => inst30.IN0
+state[0] => inst15.IN0
+state[0] => inst12.IN0
+state[0] => inst39.IN0
+state[0] => inst31.IN0
+state[0] => inst36.IN1
+state[0] => inst33.IN1
+state[0] => inst35.IN1
+state[0] => inst13.IN0
+state[1] => inst18.IN0
+state[1] => inst19.IN2
+state[1] => inst37.IN2
+state[1] => inst32.IN0
+state[1] => inst36.IN2
+state[1] => inst33.IN2
+state[1] => inst38.IN0
+state[1] => inst30.IN2
+result_strob => inst6.IN1
+result_strob => inst5.IN1
+result_strob => inst4.IN1
+result_strob => inst3.IN1
+
+
+|MACHINE_A5|lpm_bustri0:inst7
+data[0] => lpm_bustri:lpm_bustri_component.data[0]
+data[1] => lpm_bustri:lpm_bustri_component.data[1]
+enabledt => lpm_bustri:lpm_bustri_component.enabledt
+tridata[0] <> lpm_bustri:lpm_bustri_component.tridata[0]
+tridata[1] <> lpm_bustri:lpm_bustri_component.tridata[1]
+
+
+|MACHINE_A5|lpm_bustri0:inst7|lpm_bustri:lpm_bustri_component
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MACHINE_A5|lpm_constant1:inst16
+result[0] <= lpm_constant:lpm_constant_component.result[0]
+result[1] <= lpm_constant:lpm_constant_component.result[1]
+
+
+|MACHINE_A5|lpm_constant1:inst16|lpm_constant:lpm_constant_component
+result[0] <= <GND>
+result[1] <= <GND>
+
+
+|MACHINE_A5|lpm_bustri0:inst8
+data[0] => lpm_bustri:lpm_bustri_component.data[0]
+data[1] => lpm_bustri:lpm_bustri_component.data[1]
+enabledt => lpm_bustri:lpm_bustri_component.enabledt
+tridata[0] <> lpm_bustri:lpm_bustri_component.tridata[0]
+tridata[1] <> lpm_bustri:lpm_bustri_component.tridata[1]
+
+
+|MACHINE_A5|lpm_bustri0:inst8|lpm_bustri:lpm_bustri_component
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MACHINE_A5|lpm_constant2:inst17
+result[0] <= lpm_constant:lpm_constant_component.result[0]
+result[1] <= lpm_constant:lpm_constant_component.result[1]
+
+
+|MACHINE_A5|lpm_constant2:inst17|lpm_constant:lpm_constant_component
+result[0] <= <VCC>
+result[1] <= <GND>
+
+
+|MACHINE_A5|lpm_bustri0:inst9
+data[0] => lpm_bustri:lpm_bustri_component.data[0]
+data[1] => lpm_bustri:lpm_bustri_component.data[1]
+enabledt => lpm_bustri:lpm_bustri_component.enabledt
+tridata[0] <> lpm_bustri:lpm_bustri_component.tridata[0]
+tridata[1] <> lpm_bustri:lpm_bustri_component.tridata[1]
+
+
+|MACHINE_A5|lpm_bustri0:inst9|lpm_bustri:lpm_bustri_component
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MACHINE_A5|lpm_constant3:inst21
+result[0] <= lpm_constant:lpm_constant_component.result[0]
+result[1] <= lpm_constant:lpm_constant_component.result[1]
+
+
+|MACHINE_A5|lpm_constant3:inst21|lpm_constant:lpm_constant_component
+result[0] <= <GND>
+result[1] <= <VCC>
+
+
+|MACHINE_A5|lpm_bustri0:inst10
+data[0] => lpm_bustri:lpm_bustri_component.data[0]
+data[1] => lpm_bustri:lpm_bustri_component.data[1]
+enabledt => lpm_bustri:lpm_bustri_component.enabledt
+tridata[0] <> lpm_bustri:lpm_bustri_component.tridata[0]
+tridata[1] <> lpm_bustri:lpm_bustri_component.tridata[1]
+
+
+|MACHINE_A5|lpm_bustri0:inst10|lpm_bustri:lpm_bustri_component
+tridata[0] <> dout[0]
+tridata[1] <> dout[1]
+data[0] => dout[0].DATAIN
+data[1] => dout[1].DATAIN
+enabletr => ~NO_FANOUT~
+enabledt => dout[1].OE
+enabledt => dout[0].OE
+result[0] <= result[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|MACHINE_A5|lpm_constant0:inst23
+result[0] <= lpm_constant:lpm_constant_component.result[0]
+result[1] <= lpm_constant:lpm_constant_component.result[1]
+
+
+|MACHINE_A5|lpm_constant0:inst23|lpm_constant:lpm_constant_component
+result[0] <= <VCC>
+result[1] <= <VCC>
+
+

@@ -1,0 +1,891 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+VECTOR("C:/Users/litse/Desktop/—»‘Œ/À–8. Try loading/main.vwf")
+{
+	ZOOM{
+		ZBEGIN = 755615;
+		ZEND = 989735;
+		NUMERATOR = 1086;
+		DENOMINATOR = 210302;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data";
+		INDEX = 3;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[4]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[3]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[2]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[1]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[0]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address";
+		INDEX = 9;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[6]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[5]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[4]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[3]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[2]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[1]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[0]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[4]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[3]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[2]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[1]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[0]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "HIT";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "MISS";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "selected_line";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "selected_line[1]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "selected_line[0]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data";
+		INDEX = 28;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[4]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[3]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[2]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[1]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[0]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram";
+		INDEX = 34;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[4]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[3]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[2]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[1]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[0]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram";
+		INDEX = 40;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[6]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[5]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[4]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[3]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[2]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[1]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[0]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|monitor";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|offset";
+		INDEX = 49;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|offset[1]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|offset[0]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/litse/Desktop/—»‘Œ/À–8. Try loading/db/lab8.sim.cvwf")
+{
+	ZOOM{
+		ZBEGIN = 728783;
+		ZEND = 1000000;
+		NUMERATOR = 1165;
+		DENOMINATOR = 299213;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clk";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "read";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data";
+		INDEX = 3;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[4]";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[3]";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[2]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[1]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "write_data[0]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address";
+		INDEX = 9;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[6]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[5]";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[4]";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[3]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[2]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[1]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address[0]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[4]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[3]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[2]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[1]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cache_data[0]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "HIT";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "MISS";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "selected_line";
+		INDEX = 25;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "selected_line[1]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "selected_line[0]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data";
+		INDEX = 28;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[4]";
+		INDEX = 29;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[3]";
+		INDEX = 30;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[2]";
+		INDEX = 31;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[1]";
+		INDEX = 32;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "ram_data[0]";
+		INDEX = 33;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram";
+		INDEX = 34;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[4]";
+		INDEX = 35;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[3]";
+		INDEX = 36;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[2]";
+		INDEX = 37;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[1]";
+		INDEX = 38;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "data_out_ram[0]";
+		INDEX = 39;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram";
+		INDEX = 40;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[6]";
+		INDEX = 41;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[5]";
+		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[4]";
+		INDEX = 43;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[3]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[2]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[1]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "address_out_ram[0]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|monitor";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|offset";
+		INDEX = 49;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|offset[1]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "main|offset[0]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
